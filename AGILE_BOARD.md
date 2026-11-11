@@ -267,13 +267,14 @@
 - **Epic:** E6 – Deployment, QA & Final Review
 - **Description:** As the site owner, I want the project correctly configured for Vercel so that deployments succeed automatically.
 - **Acceptance Criteria:**
-  - [ ] Build command and output directory correctly configured for chosen stack (via Vercel settings and/or `vercel.json` if needed).
-  - [ ] `vercel.json` added only if required (rewrites/headers/clean URLs); configuration is minimal and documented.
-  - [ ] Local production build succeeds and matches expected output.
-  - [ ] Documentation includes steps to connect GitHub repo to Vercel and verify auto-deploy on push.
+  - [x] Build command and output directory correctly configured for chosen stack (via Vercel settings and/or `vercel.json` if needed).
+  - [x] `vercel.json` added only if required (rewrites/headers/clean URLs); configuration is minimal and documented.
+  - [x] Local production build succeeds and matches expected output.
+  - [x] Documentation includes steps to connect GitHub repo to Vercel and verify auto-deploy on push.
 - **Story Points:** 3
 - **Priority:** High
-- **Status:** Backlog
+- **Status:** Done
+- **Notes:** Added minimal `vercel.json` (clean URLs, no trailing slash). Updated README with detailed Vercel import/build/deploy steps and post-deploy checklist. Verified local production build succeeds with sitemap generation. (Actual Vercel import/deploy requires owner action in Vercel dashboard.)
 
 ### US-014 – Perform cross-device QA and final content polish
 - **Epic:** E6 – Deployment, QA & Final Review

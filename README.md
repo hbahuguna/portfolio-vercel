@@ -49,17 +49,35 @@ Build output is generated in **`./dist/`** (static assets ready for deployment).
 
 ## Deployment (Vercel)
 
-This project is intended for **Vercel** with Git integration:
+This project is intended for **Vercel** with Git integration (Hobby plan, non-commercial).
 
-1. Push the repository to GitHub (`hbahuguna/portfolio-vercel`).
-2. In Vercel, **Import Project** from the GitHub repository.
-3. Use the Astro defaults (or configure explicitly):
+### Connect the repository
+1. Push the repository to GitHub (`hbahuguna/portfolio-vercel`) — already done for `main`.
+2. Go to [vercel.com](https://vercel.com) → **Add New → Project**.
+3. **Import** the `hbahuguna/portfolio-vercel` repository (authorize GitHub if prompted).
+4. Vercel auto-detects **Astro**. Confirm these settings:
    - **Framework preset:** Astro
    - **Build command:** `npm run build`
    - **Output directory:** `dist`
-4. Deploy to receive a `*.vercel.app` URL. Subsequent pushes to `main` trigger automatic deployments.
+   - **Install command:** `npm install`
+   - **Node.js version:** 20.x or 22.x (recommended)
+5. Click **Deploy**. You'll receive a `*.vercel.app` URL (e.g., `portfolio-vercel-xxx.vercel.app`).
 
-> No `vercel.json` is required for the default static Astro setup; add one only if custom rewrites/headers are needed later.
+### Auto-deploy on push
+- Every push to `main` triggers a new production deployment automatically.
+- Pull requests create preview deployments with unique URLs.
+
+### Configuration files
+- **`vercel.json`** (minimal): enables clean URLs and disables trailing slashes.
+- **`astro.config.mjs`**: sets `site` URL for canonical/OG/sitemap generation. Update to your final Vercel domain after first deploy.
+- **`.gitignore`**: excludes `dist/`, `.astro/`, `node_modules/`.
+
+### Post-deploy checklist
+- [ ] Update `siteConfig.siteUrl` in `src/config/site.ts` to your live `*.vercel.app` URL.
+- [ ] Update `site` in `astro.config.mjs` to the same URL.
+- [ ] Replace placeholder content (name, bio, email, social links, projects).
+- [ ] Verify `robots.txt` and sitemap resolve at the live URL.
+- [ ] Run a Lighthouse audit on the live site.
 
 ## Project structure
 
