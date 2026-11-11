@@ -138,12 +138,12 @@ To add a project, append a new object to the `manualProjects` array. To remove o
 
 **Dynamic GitHub projects** (fetched client-side):
 - `githubUsername` – GitHub username to fetch repos from (default: `hbahuguna`).
-- `githubReposLimit` – max number of repos shown (default: `6`).
+- `githubPinnedRepos` – array of repository names to display (pinned repos from your GitHub profile). Update this list to change which repos appear.
 
 Defaults applied by the fetcher:
+- Fetches only the repos listed in `githubPinnedRepos`.
 - Excludes **forks**, **archived**, and **private** repositories.
 - Deduplicates repos already listed in `manualProjects` (by URL).
-- Sorts by **most recently updated** first.
 - Shows language, stars, and last-updated date.
 
 To change filtering/sorting, edit the script in `src/components/Projects.astro`.

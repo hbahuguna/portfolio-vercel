@@ -34,6 +34,14 @@ export const siteConfig = {
   siteUrl: "https://himanshubahuguna-portfolio.vercel.app",
   /** GitHub username used for dynamic repository fetching */
   githubUsername: "hbahuguna",
+  /** Pinned repository names to display in the "From GitHub" section */
+  githubPinnedRepos: [
+    "testradius-github-app",
+    "kinva",
+    "Test-Radius",
+    "skribblle-bot",
+    "langchain-document-helper",
+  ],
   /** Short role or tagline shown in the hero */
   role: "Founder@TestRadius",
   tagline: "Building AI Harness for Software Testing",
