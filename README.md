@@ -76,3 +76,15 @@ This project is intended for **Vercel** with Git integration:
 ## Content updates
 
 Content/config placeholders (bio, links, projects) will be centralized as development progresses (see `AGILE_BOARD.md`, T-001). Replace placeholders with your own information in the documented config/data files.
+
+## Repository & commit conventions
+
+- **Repository:** [`hbahuguna/portfolio-vercel`](https://github.com/hbahuguna/portfolio-vercel)
+- **Default branch:** `main` (connected to `origin`; Vercel Git integration should deploy from `main`)
+- **Commits:** Use concise [Conventional Commits](https://www.conventionalcommits.org/) where practical, e.g.
+  - `chore: initialize portfolio project`
+  - `feat: implement responsive navigation`
+  - `fix: correct GitHub API error handling`
+  - `docs: update content editing guide`
+
+Keep commits focused per story/task and push to `main` after each completed story so deployments stay in sync.

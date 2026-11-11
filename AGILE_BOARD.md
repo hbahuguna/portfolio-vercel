@@ -58,13 +58,14 @@
 - **Epic:** E1 – Project Setup & Repository
 - **Description:** As the site owner, I want the code hosted on GitHub so that changes are versioned and Vercel can auto-deploy.
 - **Acceptance Criteria:**
-  - [ ] Repository created/confirmed under `hbahuguna` (e.g., `portfolio-vercel`) with owner approval if creation is required.
-  - [ ] Local repo connected to GitHub remote (`origin`) and default branch established (`main`).
-  - [ ] At least one push to GitHub succeeds.
-  - [ ] Commit conventions noted in README or CONTRIBUTING notes (concise conventional commits).
+  - [x] Repository created/confirmed under `hbahuguna` (e.g., `portfolio-vercel`) with owner approval if creation is required.
+  - [x] Local repo connected to GitHub remote (`origin`) and default branch established (`main`).
+  - [x] At least one push to GitHub succeeds.
+  - [x] Commit conventions noted in README or CONTRIBUTING notes (concise conventional commits).
 - **Story Points:** 2
 - **Priority:** High
-- **Status:** To Do
+- **Status:** Done
+- **Notes:** Confirmed `hbahuguna/portfolio-vercel` with `origin` tracking `main`, verified successful push, and documented concise Conventional Commit conventions and workflow in `README.md`.
 
 ### T-001 – Define environment and content placeholders
 - **Epic:** E1 – Project Setup & Repository
@@ -77,6 +78,7 @@
 - **Story Points:** 2
 - **Priority:** High
 - **Status:** To Do
+- **Notes:** Queued next after US-002.
 
 ---
 
