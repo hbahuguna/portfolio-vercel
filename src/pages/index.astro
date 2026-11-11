@@ -81,7 +81,51 @@ const description = siteConfig.tagline;
   <section id="contact" class="section">
     <div class="container">
       <h2>Contact</h2>
-      <p class="muted">Reach me at <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>.</p>
+      <p class="muted">
+        Have a question or want to work together? Send a message and I'll get back to you.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-info card">
+          <h3>Get in touch</h3>
+          <p>
+            <a class="btn btn-primary" href={`mailto:${siteConfig.contactEmail}?subject=Hello%20from%20your%20portfolio`}>
+              Email me
+            </a>
+          </p>
+          <p class="muted small">
+            Or reach out directly at
+            <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>.
+          </p>
+
+          <h3 class="contact-social-heading">Elsewhere</h3>
+          <ul class="contact-social" aria-label="Social links">
+            {siteConfig.socialLinks.map((link) => (
+              <li>
+                <a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <form class="contact-form card" action={`mailto:${siteConfig.contactEmail}`} method="post" enctype="text/plain">
+          <h3>Send a message</h3>
+          <p class="muted small">This form opens your email client (no backend required).</p>
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+      </div>
     </div>
   </section>
 </BaseLayout>
@@ -202,5 +246,58 @@ const description = siteConfig.tagline;
     .about-highlights {
       grid-template-columns: 1fr 1fr;
     }
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    margin-top: var(--space-6);
+  }
+  @media (min-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .contact-social-heading {
+    margin-top: var(--space-6);
+  }
+  .contact-social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+  .contact-social a {
+    color: var(--color-primary);
+  }
+  .contact-form label {
+    display: block;
+    margin-bottom: var(--space-4);
+  }
+  .contact-form label span {
+    display: block;
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-bg);
+    color: var(--color-text);
+    font: inherit;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 1px;
+  }
+  .small {
+    font-size: 0.9rem;
   }
 </style>

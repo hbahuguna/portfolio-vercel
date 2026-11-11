@@ -155,13 +155,14 @@
 - **Epic:** E3 – Core Pages & Content Sections
 - **Description:** As a visitor, I want a simple way to contact the owner so that I can reach out easily.
 - **Acceptance Criteria:**
-  - [ ] Contact section includes clear CTA and contact method (mailto link preferred; form UI optional but must not require complex backend).
-  - [ ] Displays placeholder email/social links from config.
-  - [ ] If a form is included, it degrades gracefully (e.g., mailto) or uses a Vercel-compatible serverless approach only if necessary and documented.
-  - [ ] Links are accessible and have descriptive labels.
+  - [x] Contact section includes clear CTA and contact method (mailto link preferred; form UI optional but must not require complex backend).
+  - [x] Displays placeholder email/social links from config.
+  - [x] If a form is included, it degrades gracefully (e.g., mailto) or uses a Vercel-compatible serverless approach only if necessary and documented.
+  - [x] Links are accessible and have descriptive labels.
 - **Story Points:** 2
 - **Priority:** High
-- **Status:** Backlog
+- **Status:** Done
+- **Notes:** Built Contact section with mailto CTA, social links from config, and a mailto-based form (no backend). Added accessible labels and focus styles. Verified build.
 
 ### US-008 – Build Footer with essential links and metadata
 - **Epic:** E3 – Core Pages & Content Sections
