@@ -131,12 +131,13 @@
 - **Epic:** E3 – Core Pages & Content Sections
 - **Description:** As a visitor, I want an engaging hero/intro section so that I immediately understand who the portfolio belongs to and what they do.
 - **Acceptance Criteria:**
-  - [ ] Hero includes name, role/tagline, short intro text (placeholders), and primary calls-to-action (e.g., View Projects, Contact).
-  - [ ] Visually prominent, responsive, and accessible (proper heading hierarchy).
-  - [ ] Content sourced from editable config/placeholders where practical.
+  - [x] Hero includes name, role/tagline, short intro text (placeholders), and primary calls-to-action (e.g., View Projects, Contact).
+  - [x] Visually prominent, responsive, and accessible (proper heading hierarchy).
+  - [x] Content sourced from editable config/placeholders where practical.
 - **Story Points:** 2
 - **Priority:** High
-- **Status:** To Do
+- **Status:** Done
+- **Notes:** Rebuilt hero in `index.astro` with responsive two-column layout, avatar placeholder, CTAs (View Projects, Get in Touch), and social links from `siteConfig`. Single H1 heading hierarchy preserved. Verified build.
 
 ### US-006 – Build About section/page
 - **Epic:** E3 – Core Pages & Content Sections
