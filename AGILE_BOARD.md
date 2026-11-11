@@ -225,13 +225,14 @@
 - **Epic:** E5 – Contact, SEO & Accessibility
 - **Description:** As the site owner, I want basic SEO and social sharing tags so that the site is discoverable and previews well when shared.
 - **Acceptance Criteria:**
-  - [ ] Unique page title and meta description configured (with placeholders).
-  - [ ] Open Graph and Twitter card meta tags included (title, description, image, URL placeholders).
-  - [ ] Canonical URL strategy documented/configurable for production domain.
-  - [ ] Semantic heading structure (single H1 per page/view context) maintained.
+  - [x] Unique page title and meta description configured (with placeholders).
+  - [x] Open Graph and Twitter card meta tags included (title, description, image, URL placeholders).
+  - [x] Canonical URL strategy documented/configurable for production domain.
+  - [x] Semantic heading structure (single H1 per page/view context) maintained.
 - **Story Points:** 2
 - **Priority:** Medium
-- **Status:** Backlog
+- **Status:** Done
+- **Notes:** Enhanced `BaseLayout.astro` with canonical URL (from `siteConfig.siteUrl` + path, overridable), robots, keywords, OG/Twitter tags with absolute URLs, and `noindex` option. Documented SEO/canonical strategy in `README.md`. Verified build. Single H1 maintained.
 
 ### US-012 – Ensure baseline accessibility and performance hygiene
 - **Epic:** E5 – Contact, SEO & Accessibility

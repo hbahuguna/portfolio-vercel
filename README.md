@@ -73,6 +73,13 @@ This project is intended for **Vercel** with Git integration:
 └── AGILE_BOARD.md   # Project plan and progress tracking
 ```
 
+## SEO & canonical URL
+
+- Set your production domain in `src/config/site.ts` via `siteConfig.siteUrl` (e.g., `https://yourname.vercel.app`).
+- The `BaseLayout` generates a **canonical URL** from `siteUrl` + the current path.
+- Override per-page with the `canonical` prop on `BaseLayout` if needed.
+- Open Graph and Twitter card tags (title, description, image, URL) are generated automatically.
+
 ## Content updates
 
 Edit **`src/config/site.ts`** to update portfolio content in one place:

@@ -28,6 +28,8 @@ export type ManualProject = {
 export const siteConfig = {
   /** Display name / owner name */
   name: "Your Name",
+  /** Production site URL (used for canonical/OG URLs) */
+  siteUrl: "https://hbahuguna.vercel.app",
   /** GitHub username used for dynamic repository fetching */
   githubUsername: "hbahuguna",
   /** Short role or tagline shown in the hero */
