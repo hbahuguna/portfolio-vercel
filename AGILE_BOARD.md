@@ -168,12 +168,13 @@
 - **Epic:** E3 – Core Pages & Content Sections
 - **Description:** As a visitor, I want a footer with useful links so that I can find social profiles and site info from anywhere.
 - **Acceptance Criteria:**
-  - [ ] Footer includes copyright/name placeholder, GitHub/profile links, and quick navigation or contact link.
-  - [ ] Consistent styling with site theme and responsive behavior.
-  - [ ] Uses semantic `<footer>` element.
+  - [x] Footer includes copyright/name placeholder, GitHub/profile links, and quick navigation or contact link.
+  - [x] Consistent styling with site theme and responsive behavior.
+  - [x] Uses semantic `<footer>` element.
 - **Story Points:** 1
 - **Priority:** Medium
-- **Status:** Backlog
+- **Status:** Done
+- **Notes:** Enhanced footer in `BaseLayout.astro` with brand, quick nav links, social links, copyright, and build/deploy note. Responsive grid layout and theme-consistent styling. Verified build.
 
 ---
 

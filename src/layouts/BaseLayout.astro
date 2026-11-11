@@ -71,12 +71,26 @@ const { title, description = 'Personal portfolio website for hbahuguna.' } = Ast
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>&copy; {new Date().getFullYear()} hbahuguna. All rights reserved.</p>
-        <p class="footer-links">
+        <div class="footer-brand">
+          <a class="brand" href="/">hbahuguna</a>
+          <p class="footer-tagline">Building clean, useful web experiences.</p>
+        </div>
+        <nav aria-label="Footer" class="footer-nav">
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-social">
           <a href="https://github.com/hbahuguna" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <span aria-hidden="true">·</span>
-          <a href="mailto:you@example.com">Contact</a>
-        </p>
+          <a href="mailto:you@example.com">Email</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; {new Date().getFullYear()} hbahuguna. All rights reserved.</p>
+        <p class="footer-note">Built with Astro · Deployed on Vercel</p>
       </div>
     </footer>
 
