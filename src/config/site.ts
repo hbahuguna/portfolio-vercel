@@ -35,7 +35,7 @@ export const siteConfig = {
   /** GitHub username used for dynamic repository fetching */
   githubUsername: "hbahuguna",
   /** Short role or tagline shown in the hero */
-  role: "Founder",
+  role: "Founder@TestRadius",
   tagline: "Building AI Harness for Software Testing",
   /** Short intro/bio placeholder (hero/about) */
   bio: "Founder at TestRadius, building AI that tests code like a human. I'm on a mission to eliminate flaky tests and help engineering teams ship faster with confidence. Previously, I built automation frameworks at Cohesity and have a deep passion for AI, machine learning, and developer tools.",
@@ -79,22 +79,128 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
   /** Curated/manual projects (edit or add entries as needed) */
   manualProjects: [
     {
-      title: "Featured Project One",
+      title: "Test-Radius",
       description:
-        "Placeholder description for a highlighted project. Explain the problem, your approach, and the outcome.",
-      tags: ["Astro", "TypeScript", "CSS"],
-      repoUrl: "https://github.com/hbahuguna/example-project-one",
-      demoUrl: "https://example.com",
+        "Test Impact Analysis (TIA) that runs only the tests impacted by every code change. Powered by AST-based symbol resolution, Istanbul code coverage, and a Neo4j graph database. Deterministic, explainable, and open source. In a real-world validation on a mature Django monolith, TestRadius reduced required test runs from 735 to 42 — a 94% reduction — without missing a single relevant failure.",
+      tags: ["Python",
+      "FastAPI",
+      "Neo4j",
+      "Playwright",
+      "React",
+      "Docker",
+      "TypeScript",],
+      repoUrl: "https://github.com/hbahuguna/Test-Radius",
+      demoUrl: "https://testradius.dev/",
       featured: true,
     },
     {
-      title: "Featured Project Two",
+      title: "Test Agent",
       description:
-        "Placeholder description for another project. Include key features or impact where possible.",
-      tags: ["JavaScript", "API", "Responsive Design"],
-      repoUrl: "https://github.com/hbahuguna/example-project-two",
+        "AI-powered autonomous SDET platform. Multi-agent Chrome Dev Protocol test generator that turns natural-language scenarios into production-grade UI and API automation. Built with FastAPI, Docker sandboxes, and LLM inference.",
+      tags: ["Python",
+      "FastAPI",
+      "AI Agents",
+      "Playwright",
+      "Docker",
+      "LLM",],
+      repoUrl: "https://github.com/hbahuguna/testradius",
+      demoUrl: "https://testradius.dev/login",	       
       featured: false,
     },
+    {
+    title: "assay",
+    description:
+      "A deterministic, risk-based testing harness for release decisions. Inspects a source tree, operates a live target when a browser is available, stores hashed evidence, and emits a machine-readable confidence score. Five fixed phases — Risk Analysis, Test Planning, Execution, Evidence Collection, and Confidence Scoring — with no model deciding check order or scoring. Scoped engineering judgment, not a bug oracle.",
+    tags: [
+      "Python",
+      "Testing",
+      "CI/CD",
+      "Release Confidence",
+      "Playwright",
+    ],
+    repoUrl: "https://github.com/hbahuguna/assay",
+    featured: true,
+    },
+    {
+    title: "kinva",
+    description:
+      "AI development skills for OpenCode. Kinva is Sanskrit for yeast — the agent that transforms raw ingredients into something greater. Four skills cover the full workflow: brainstorming (clarify fuzzy problems), vibe-coding (build fast through conversational loops), TDD (lock correctness before implementation), and debugging (find root causes cleanly).",
+    tags: [
+      "AI Agents",
+      "OpenCode",
+      "Developer Tools",
+      "Prompt Engineering",
+      "TDD",
+    ],
+    repoUrl: "https://github.com/hbahuguna/kinva",
+    featured: true,
+  },
+  {
+    title: "PromptCart",
+    description:
+      "An event-driven microservices platform that lets customers browse catalogs, place orders, and receive updates entirely through WhatsApp chat. Built as a distributed system with independent services handling catalog, orders, notifications, and conversational state.",
+    tags: [
+      "Microservices",
+      "Node.js",
+      "TypeScript",
+      "WhatsApp API",
+      "Event-Driven",
+      "Docker",
+    ],
+    repoUrl: "https://github.com/hbahuguna/promptcart",
+    featured: true,
+  },
+  {
+    title: "LangChain Document Helper",
+    description:
+      "A custom-built LangChain bot that acts as a conversational interface to the LangChain documentation. Answers questions by retrieving and reasoning over docs, deployed as a Streamlit app. A practical exploration of RAG (Retrieval-Augmented Generation) for developer documentation.",
+    tags: [
+      "LangChain",
+      "Python",
+      "Streamlit",
+      "RAG",
+      "LLM",
+      "Documentation",
+    ],
+    repoUrl: "https://github.com/hbahuguna/langchain-document-helper",
+    demoUrl:
+      "https://hbahuguna-langchain-document-helper-main-06bch7.streamlit.app/",
+    featured: true,
+  },
+  {
+    title: "Pregnancy Tracker App",
+    description:
+      "An Android app for tracking pregnancy milestones week by week. Built as a capstone project with a focus on a clean mobile experience for expectant parents.",
+    tags: ["Android", "Java", "Mobile", "Gradle"],
+    repoUrl: "https://github.com/hbahuguna/Pregnancy-Tracker-App",
+    featured: true,
+  },
+  {
+    title: "diff2HtmlCompare",
+    description:
+      "A python script that takes a number of urls to compare the differences between html sources (side-by-side) in an HTML format. First url is the base url. All other url htmls are compared against the base url.",
+    tags: ["Python", "Git", "pip"],
+    repoUrl: "https://github.com/hbahuguna/diff2HtmlCompare",
+    featured: true,
+  },
+  {
+    title: "skribblle-bot",
+    description:
+      "Simple bot to fill words used in past games in the chat window",
+    tags: ["JavaScript", "Chrome Developers Tool", "Chrome"],
+    repoUrl: "https://github.com/hbahuguna/skribblle-bot",
+    featured: true,
+  },
+  {
+    title: "jacoco-integration-test-code-coverage",
+    description:
+      "Java test code coverage using Jacoco",
+    tags: ["Java", "Jacoco", "Code Coverage"],
+    repoUrl: "https://github.com/hbahuguna/jacoco-integration-test-code-coverage",
+    featured: true,
+  },
+
+
   ] as ManualProject[],
   /** Optional: number of GitHub repos to display in the dynamic section */
   githubReposLimit: 6,
