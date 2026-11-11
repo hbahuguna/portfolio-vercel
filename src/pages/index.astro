@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Projects from '../components/Projects.astro';
 import { siteConfig } from '../config/site';
 
 const title = `${siteConfig.name} – Portfolio`;
@@ -34,12 +35,7 @@ const description = siteConfig.tagline;
     </div>
   </section>
 
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>Projects</h2>
-      <p class="muted">Featured and GitHub projects will appear here.</p>
-    </div>
-  </section>
+  <Projects />
 
   <section id="about" class="section">
     <div class="container">

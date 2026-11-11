@@ -1,0 +1,75 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import { siteConfig } from '../config/site';
+
+const manualProjects = siteConfig.manualProjects ?? [];
+---
+
+<section id="projects" class="section">
+  <div class="container">
+    <h2>Projects</h2>
+    <p class="muted">A selection of featured work and recent repositories.</p>
+
+    {manualProjects.length > 0 ? (
+      <>
+        <h3 class="subsection-title">Featured Projects</h3>
+        <div class="projects-grid">
+          {manualProjects.map((project) => (
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              tags={project.tags}
+              repoUrl={project.repoUrl}
+              demoUrl={project.demoUrl}
+              image={project.image}
+              featured={project.featured}
+            />
+          ))}
+        </div>
+      </>
+    ) : (
+      <p class="muted empty-state">No featured projects yet. Add entries to <code>src/config/site.ts</code>.</p>
+    )}
+
+    <div class="github-projects" id="github-projects">
+      <h3 class="subsection-title">From GitHub</h3>
+      <p class="muted small">
+        Public repositories for <strong>{siteConfig.githubUsername}</strong> will load here.
+      </p>
+      <div class="projects-grid" id="github-projects-grid">
+        <p class="muted" id="github-status">Loading repositories…</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .subsection-title {
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-4);
+  }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  @media (min-width: 720px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .empty-state {
+    padding: var(--space-6);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    text-align: center;
+  }
+  .small {
+    font-size: 0.9rem;
+  }
+</style>

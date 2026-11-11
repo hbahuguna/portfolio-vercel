@@ -1,0 +1,143 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  tags?: string[];
+  repoUrl?: string;
+  demoUrl?: string;
+  image?: string;
+  featured?: boolean;
+  source?: 'manual' | 'github';
+  stars?: number;
+  language?: string;
+  updated?: string;
+}
+
+const {
+  title,
+  description,
+  tags = [],
+  repoUrl,
+  demoUrl,
+  image,
+  featured = false,
+  source = 'manual',
+  stars,
+  language,
+  updated,
+} = Astro.props;
+---
+
+<article class={`project-card card ${featured ? 'featured' : ''}`}>
+  {image && (
+    <div class="project-image">
+      <img src={image} alt={`${title} preview`} loading="lazy" />
+    </div>
+  )}
+  <div class="project-body">
+    <div class="project-header">
+      <h3>{title}</h3>
+      {featured && <span class="badge">Featured</span>}
+    </div>
+    <p class="project-desc">{description}</p>
+    {tags.length > 0 && (
+      <ul class="project-tags" aria-label="Technologies">
+        {tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+    )}
+    {(language || stars !== undefined || updated) && (
+      <p class="project-meta muted small">
+        {language && <span>{language}</span>}
+        {stars !== undefined && <span>★ {stars}</span>}
+        {updated && <span>Updated {updated}</span>}
+      </p>
+    )}
+    <div class="project-actions">
+      {repoUrl && (
+        <a class="btn btn-secondary" href={repoUrl} target="_blank" rel="noopener noreferrer">
+          View Code
+        </a>
+      )}
+      {demoUrl && (
+        <a class="btn btn-primary" href={demoUrl} target="_blank" rel="noopener noreferrer">
+          Live Demo
+        </a>
+      )}
+    </div>
+  </div>
+</article>
+
+<style>
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .project-card.featured {
+    border-color: var(--color-primary);
+  }
+  .project-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-4);
+  }
+  .project-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin-bottom: var(--space-2);
+  }
+  .project-header h3 {
+    margin: 0;
+  }
+  .badge {
+    background: var(--color-primary);
+    color: var(--color-primary-contrast);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+  }
+  .project-desc {
+    margin: 0 0 var(--space-4);
+    color: var(--color-muted);
+    flex: 1;
+  }
+  .project-tags {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-4);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+  .project-tags li {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: var(--space-1) var(--space-2);
+    font-size: 0.8rem;
+  }
+  .project-meta {
+    margin: 0 0 var(--space-4);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+  .project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: auto;
+  }
+</style>

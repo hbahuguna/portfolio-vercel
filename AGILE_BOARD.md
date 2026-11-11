@@ -184,12 +184,13 @@
 - **Epic:** E4 – Projects Integration (GitHub + Manual)
 - **Description:** As the site owner, I want to feature selected projects manually so that I can highlight my best work regardless of GitHub data.
 - **Acceptance Criteria:**
-  - [ ] Projects section supports manually defined entries from config/data (title, description, tech/tags, repo/demo links, optional image).
-  - [ ] Project cards/list render responsively with clear CTAs (View Code / Live Demo when available).
-  - [ ] Empty states handled gracefully if no manual projects are provided.
+  - [x] Projects section supports manually defined entries from config/data (title, description, tech/tags, repo/demo links, optional image).
+  - [x] Project cards/list render responsively with clear CTAs (View Code / Live Demo when available).
+  - [x] Empty states handled gracefully if no manual projects are provided.
 - **Story Points:** 3
 - **Priority:** High
-- **Status:** Backlog
+- **Status:** Done
+- **Notes:** Created `ProjectCard.astro` and `Projects.astro` components. Manual projects render from `siteConfig.manualProjects` with tags, CTAs, featured badge, and empty state. Responsive grid (1/2/3 columns). Verified build.
 
 ### US-010 – Fetch and display GitHub repositories dynamically
 - **Epic:** E4 – Projects Integration (GitHub + Manual)
