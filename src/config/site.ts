@@ -345,7 +345,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       "prompt engineering",
       "tdd",
     ],
-    repourl: "https://github.com/hbahuguna/kinva",
+    repoUrl: "https://github.com/hbahuguna/kinva",
     featured: true,
   },
     {
@@ -422,7 +422,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       "NPM",
       "Python",
     ],
-    repourl: "https://github.com/hbahuguna/chatgpt-app",
+    repoUrl: "https://github.com/hbahuguna/chatgpt-app",
     featured: true,
   },
   {
@@ -435,7 +435,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       "Docker",
       "JaveScript",
     ],
-    repourl: "https://github.com/hbahuguna/b2b-marketplace",
+    repoUrl: "https://github.com/hbahuguna/b2b-marketplace",
     featured: true,
   },
   {
@@ -447,7 +447,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       "Python",
       "JaveScript",
     ],
-    repourl: "https://github.com/hbahuguna/smartbizchat",
+    repoUrl: "https://github.com/hbahuguna/smartbizchat",
     featured: true,
   },
   {
@@ -457,7 +457,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
     tags: [
       "JaveScript",
     ],
-    repourl: "https://github.com/hbahuguna/private-blockchain",
+    repoUrl: "https://github.com/hbahuguna/private-blockchain",
     featured: true,
   },
 
