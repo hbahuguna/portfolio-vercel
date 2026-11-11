@@ -105,7 +105,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       "LLM",],
       repoUrl: "https://github.com/hbahuguna/testradius",
       demoUrl: "https://testradius.dev/login",	       
-      featured: false,
+      featured: true,
     },
     {
     title: "assay",
