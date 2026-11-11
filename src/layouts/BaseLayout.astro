@@ -133,6 +133,21 @@ const ogImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
           });
         }
 
+        // Mark active nav link based on hash
+        const setActiveNav = () => {
+          const hash = window.location.hash || '#hero';
+          navLinks?.querySelectorAll('a').forEach((a) => {
+            const href = a.getAttribute('href');
+            if (href === hash) {
+              a.setAttribute('aria-current', 'page');
+            } else {
+              a.removeAttribute('aria-current');
+            }
+          });
+        };
+        setActiveNav();
+        window.addEventListener('hashchange', setActiveNav);
+
         const themeBtn = document.querySelector('.theme-toggle');
         const themeIcon = document.querySelector('.theme-icon');
         const updateIcon = (theme) => {

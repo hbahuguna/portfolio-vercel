@@ -238,13 +238,14 @@
 - **Epic:** E5 – Contact, SEO & Accessibility
 - **Description:** As a visitor using assistive technology or mobile devices, I want an accessible and performant site so that I can use it comfortably.
 - **Acceptance Criteria:**
-  - [ ] Semantic HTML landmarks used (`header`, `nav`, `main`, `section`, `footer`).
-  - [ ] Images include meaningful `alt` text (or empty alt for decorative images).
-  - [ ] Sufficient color contrast and visible focus indicators for interactive elements.
-  - [ ] No obvious performance anti-patterns; assets optimized/reasonably sized; Lighthouse/quick audit issues noted and addressed where feasible.
+  - [x] Semantic HTML landmarks used (`header`, `nav`, `main`, `section`, `footer`).
+  - [x] Images include meaningful `alt` text (or empty alt for decorative images).
+  - [x] Sufficient color contrast and visible focus indicators for interactive elements.
+  - [x] No obvious performance anti-patterns; assets optimized/reasonably sized; Lighthouse/quick audit issues noted and addressed where feasible.
 - **Story Points:** 3
 - **Priority:** Medium
-- **Status:** Backlog
+- **Status:** Done
+- **Notes:** Verified semantic landmarks throughout. Added `prefers-reduced-motion` support, `aria-current` active nav highlighting, and maintained focus indicators. Images use lazy loading and meaningful alt text. SVG assets are small. Verified build.
 
 ### T-004 – Add robots and sitemap basics (as applicable)
 - **Epic:** E5 – Contact, SEO & Accessibility
