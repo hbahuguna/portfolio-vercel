@@ -411,7 +411,8 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
     tags: ["Java", "Jacoco", "Code Coverage"],
     repoUrl: "https://github.com/hbahuguna/jacoco-integration-test-code-coverage",
     featured: true,
-  },{
+  },
+  {
     title: "chatgpt-app",
     description:
       "chat gpt app with prompt massaging",
