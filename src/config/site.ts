@@ -1,4 +1,4 @@
-/**
+/me**
  * Site content & metadata configuration
  * -------------------------------------
  * Edit this file to update your portfolio content (name, bio, links, projects).
@@ -27,37 +27,54 @@ export type ManualProject = {
 
 export const siteConfig = {
   /** Display name / owner name */
-  name: "Your Name",
+  name: "Himanshu Bahuguna",
   /** Production site URL (used for canonical/OG URLs) */
-  siteUrl: "https://hbahuguna.vercel.app",
+  siteUrl: "https://himanshubahuguna-portfolio.vercel.app/",
   /** GitHub username used for dynamic repository fetching */
   githubUsername: "hbahuguna",
   /** Short role or tagline shown in the hero */
-  role: "Software Developer",
-  tagline: "Building clean, useful, and performant web experiences.",
+  role: "Founder",
+  tagline: "Building AI Harness for Software Testing",
   /** Short intro/bio placeholder (hero/about) */
-  bio: "This is a placeholder bio. Share a concise summary of who you are, what you build, and what you're interested in.",
+  bio: "Founder at TestRadius, building AI that tests code like a human. I'm on a mission to eliminate flaky tests and help engineering teams ship faster with confidence. Previously, I built automation frameworks at Cohesity and have a deep passion for AI, machine learning, and developer tools.",
   /** Longer about placeholder for the About section */
   about:
-    "Replace this with a longer description of your background, experience, and goals. You can include your focus areas, the kinds of problems you enjoy solving, and what you're currently learning.",
+    "I'm a builder at heart, currently focused on solving a problem I know intimately: the friction and frustration of unreliable software testing. As the founder of TestRadius, I'm developing an AI agent that explores UIs, adapts to changes, and validates goals—just like a human tester—to cut CI time by 80%.
+
+My journey began as a Software Engineer at Ness Technologies, then I worked at BMC Software as staff SDET. I became an SDET Manager at People Inc, where I spent years connecting the dots between various automation frameworks and building robust systems for backup and recovery software at Cohesity. This hands-on experience gave me a deep understanding of the pain points that TestRadius is designed to solve.
+
+Beyond TestRadius, I'm an active learner and builder, constantly exploring the intersection of AI and software development. You'll find me experimenting with LangChain, fine-tuning models, and contributing to open-source projects on GitHub. I'm always open to connecting with fellow engineers and founders who are passionate about improving the developer experience.",
   /** Skills/technologies to highlight (edit as needed) */
   skills: [
-    "JavaScript",
-    "TypeScript",
-    "Astro",
-    "HTML/CSS",
+    "LangChain",
+    "LLM Fine-tuning",
+    "AI Engineering",
+    "OpenCode",
     "Node.js",
-    "Git",
-    "Responsive Design",
+    "Agentic Development Workflows",
+    "Test Automation",
+    "AI-Driven Testing",
+    "Test Impact Analysis",
+    "Flaky Test Detection",
+    "Playwright",
+    "Selenium",
+    "CI/CD",
+    "GitHub Actions",
+    "Node.js",
+    "Python",
     "REST APIs",
+    "Git",
+    "Docker",
   ],
   /** Primary contact email (used for mailto links) */
-  contactEmail: "you@example.com",
+  contactEmail: "himbahuguna@gmail.com",
   /** Social/profile links */
   socialLinks: [
     { label: "GitHub", href: "https://github.com/hbahuguna" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/your-profile" },
-    { label: "X / Twitter", href: "https://x.com/your-handle" },
+    { label: "LinkedIn", href: "linkedin.com/in/himanshu-bahuguna-latest/" },
+    { label: "X / Twitter", href: "https://x.com/TestSquad62299" },
+    { label: "Compay Website", href: "https://testradius.dev/" },
+    { label: "Medium", href: "https://medium.com/@hbahuguna" },
   ] as SocialLink[],
   /** Curated/manual projects (edit or add entries as needed) */
   manualProjects: [
