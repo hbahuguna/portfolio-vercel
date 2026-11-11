@@ -62,13 +62,35 @@ const description = siteConfig.tagline;
         </div>
       </div>
 
-      <div class="about-highlights">
-        <div class="card">
-          <h3>Experience</h3>
-          <p class="muted">
-            Placeholder: Add a short summary of your work experience, roles, or internships. Link to a resume if you have one.
-          </p>
+      <div class="about-experience">
+        <h3>Experience</h3>
+        <div class="experience-list">
+          {siteConfig.experience.map((exp) => (
+            <div class="experience-card card">
+              <div class="experience-header">
+                <div>
+                  <h4 class="experience-role">{exp.role}</h4>
+                  <p class="experience-company">{exp.company}</p>
+                </div>
+                <div class="experience-meta">
+                  <span class="experience-dates">{exp.startDate} – {exp.endDate}</span>
+                  {exp.location && <span class="experience-location muted small">{exp.location}</span>}
+                </div>
+              </div>
+              {exp.description && <p class="experience-desc">{exp.description}</p>}
+              {exp.skills && exp.skills.length > 0 && (
+                <ul class="experience-skills" aria-label="Skills">
+                  {exp.skills.map((skill) => (
+                    <li class="skill-tag">{skill}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
         </div>
+      </div>
+
+      <div class="about-highlights">
         <div class="card">
           <h3>Education</h3>
           <p class="muted">
@@ -243,6 +265,67 @@ const description = siteConfig.tagline;
     .about-highlights {
       grid-template-columns: 1fr 1fr;
     }
+  }
+
+  .about-experience {
+    margin-bottom: var(--space-8);
+  }
+  .about-experience h3 {
+    margin-bottom: var(--space-4);
+  }
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  .experience-card {
+    padding: var(--space-6);
+  }
+  .experience-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+  }
+  .experience-role {
+    margin: 0;
+    font-size: 1.125rem;
+  }
+  .experience-company {
+    margin: var(--space-1) 0 0;
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+  .experience-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-1);
+    text-align: right;
+  }
+  .experience-dates {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .experience-location {
+    font-size: 0.85rem;
+  }
+  .experience-desc {
+    margin: 0 0 var(--space-3);
+    color: var(--color-muted);
+  }
+  .experience-skills {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+  .experience-skills .skill-tag {
+    font-size: 0.8rem;
   }
 
   .contact-grid {

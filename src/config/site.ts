@@ -10,6 +10,16 @@ export type SocialLink = {
   href: string;
 };
 
+export type Experience = {
+  company: string;
+  role: string;
+  startDate: string;
+  endDate: string;
+  location?: string;
+  description?: string;
+  skills?: string[];
+};
+
 export type ManualProject = {
   title: string;
   description: string;
@@ -74,6 +84,118 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
     "Git",
     "Docker",
   ],
+  /** Work experience (newest first) */
+  experience: [
+    {
+      company: "TestRadius",
+      role: "Founder",
+      startDate: "Jan 2026",
+      endDate: "Present",
+      location: "Remote",
+      description:
+        "Building AI-powered test impact analysis — map, analyze, and execute only the tests that matter. Leading product development, customer development, and go-to-market strategy.",
+      skills: [
+        "Product Development",
+        "Customer Development",
+        "Software Engineering",
+        "Software Testing",
+        "DevOps",
+        "Business Development",
+        "Team Building",
+        "Go To Market",
+        "Fund Raising",
+        "Sales",
+        "Marketing",
+      ],
+    },
+    {
+      company: "Cohesity",
+      role: "Staff SDET",
+      startDate: "Oct 2022",
+      endDate: "Jun 2026",
+      location: "Remote",
+      description:
+        "Staff Software Engineer in Test, building robust automation frameworks for backup and recovery software.",
+    },
+    {
+      company: "Udacity",
+      role: "Technical Mentor & Reviewer",
+      startDate: "May 2019",
+      endDate: "Jun 2026",
+      location: "Remote",
+      description:
+        "Mentoring and reviewing student projects for Udacity nanodegree programs. Awarded Elite Mentor Badge (Q4 2021) and Premium Mentor Badge.",
+      skills: ["Python"],
+    },
+    {
+      company: "Outco Inc.",
+      role: "Technical Coach",
+      startDate: "Dec 2022",
+      endDate: "Aug 2023",
+      location: "Remote",
+      description:
+        "Coaching candidates on data structures and algorithms for technical interviews.",
+      skills: ["Data Structures and Algorithms"],
+    },
+    {
+      company: "Dotdash Meredith",
+      role: "Sr. Manager SDET",
+      startDate: "Jan 2022",
+      endDate: "Oct 2022",
+      location: "Edmonton, Alberta, Canada",
+      description:
+        "Leading SDET teams and driving test automation strategy.",
+      skills: ["Java"],
+    },
+    {
+      company: "Dotdash",
+      role: "Manager SDET",
+      startDate: "Mar 2020",
+      endDate: "Jan 2022",
+      location: "Edmonton, Alberta, Canada",
+      description:
+        "Managed SDET team, overseeing test automation frameworks and quality strategy.",
+      skills: ["Java"],
+    },
+    {
+      company: "Dotdash",
+      role: "Lead SDET",
+      startDate: "Oct 2019",
+      endDate: "Mar 2020",
+      location: "Edmonton, Alberta, Canada",
+      description:
+        "Led SDET initiatives and mentored team members on test automation best practices.",
+      skills: ["Java", "Software Development"],
+    },
+    {
+      company: "Dotdash",
+      role: "Senior Software QA Engineer",
+      startDate: "Sep 2014",
+      endDate: "Sep 2019",
+      location: "New York City Metropolitan Area",
+      description:
+        "Senior QA Engineer responsible for test automation and quality assurance.",
+      skills: ["Java", "Software Development"],
+    },
+    {
+      company: "BMC Software",
+      role: "Staff Software Engineer",
+      startDate: "Mar 2008",
+      endDate: "Sep 2014",
+      location: "New York, United States",
+      description:
+        "Staff Software Engineer working on enterprise software solutions.",
+    },
+    {
+      company: "Ness Technologies",
+      role: "Software Engineer",
+      startDate: "Nov 2005",
+      endDate: "Mar 2008",
+      location: "Bangalore Urban district, India",
+      description:
+        "Software Engineer working on enterprise applications.",
+    },
+  ] as Experience[],
   /** Primary contact email (used for mailto links) */
   contactEmail: "himbahuguna@gmail.com",
   /** Social/profile links */
