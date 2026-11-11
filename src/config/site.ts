@@ -38,6 +38,17 @@ export const siteConfig = {
   /** Longer about placeholder for the About section */
   about:
     "Replace this with a longer description of your background, experience, and goals. You can include your focus areas, the kinds of problems you enjoy solving, and what you're currently learning.",
+  /** Skills/technologies to highlight (edit as needed) */
+  skills: [
+    "JavaScript",
+    "TypeScript",
+    "Astro",
+    "HTML/CSS",
+    "Node.js",
+    "Git",
+    "Responsive Design",
+    "REST APIs",
+  ],
   /** Primary contact email (used for mailto links) */
   contactEmail: "you@example.com",
   /** Social/profile links */

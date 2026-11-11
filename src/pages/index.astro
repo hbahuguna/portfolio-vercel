@@ -44,7 +44,37 @@ const description = siteConfig.tagline;
   <section id="about" class="section">
     <div class="container">
       <h2>About</h2>
-      <p>{siteConfig.about}</p>
+      <div class="about-grid">
+        <div class="about-bio">
+          <p>{siteConfig.about}</p>
+          <p class="muted">
+            This is placeholder content. Replace it with your own story, the projects you're proud of, and what you're looking for next.
+          </p>
+        </div>
+        <div class="about-skills">
+          <h3>Skills &amp; Technologies</h3>
+          <ul class="skill-list" aria-label="Skills">
+            {siteConfig.skills.map((skill) => (
+              <li class="skill-tag">{skill}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div class="about-highlights">
+        <div class="card">
+          <h3>Experience</h3>
+          <p class="muted">
+            Placeholder: Add a short summary of your work experience, roles, or internships. Link to a resume if you have one.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Education</h3>
+          <p class="muted">
+            Placeholder: Add your degree, institution, or relevant coursework/certifications.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -128,5 +158,49 @@ const description = siteConfig.tagline;
   }
   h2 {
     margin-top: 0;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+  }
+  @media (min-width: 900px) {
+    .about-grid {
+      grid-template-columns: 1.4fr 1fr;
+    }
+  }
+  .about-bio p {
+    margin-bottom: var(--space-4);
+  }
+  .about-skills h3,
+  .about-highlights h3 {
+    margin-top: 0;
+  }
+  .skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+  .skill-tag {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: var(--space-1) var(--space-3);
+    font-size: 0.9rem;
+    color: var(--color-text);
+  }
+  .about-highlights {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  @media (min-width: 720px) {
+    .about-highlights {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 </style>

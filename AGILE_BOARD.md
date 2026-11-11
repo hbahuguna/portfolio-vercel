@@ -143,12 +143,13 @@
 - **Epic:** E3 – Core Pages & Content Sections
 - **Description:** As a visitor, I want to learn more about the owner so that I can understand their background and skills.
 - **Acceptance Criteria:**
-  - [ ] About section includes bio placeholder, skills/technologies list, and optional highlights (experience/education placeholders).
-  - [ ] Clear structure with semantic headings and readable typography.
-  - [ ] Responsive layout (single column on mobile, enhanced on larger screens).
+  - [x] About section includes bio placeholder, skills/technologies list, and optional highlights (experience/education placeholders).
+  - [x] Clear structure with semantic headings and readable typography.
+  - [x] Responsive layout (single column on mobile, enhanced on larger screens).
 - **Story Points:** 2
 - **Priority:** High
-- **Status:** Backlog
+- **Status:** Done
+- **Notes:** Expanded About section with bio, skills list (from `siteConfig.skills`), and Experience/Education placeholder cards. Added responsive grid layout and skill tags. Verified build.
 
 ### US-007 – Build Contact section with accessible contact method
 - **Epic:** E3 – Core Pages & Content Sections
