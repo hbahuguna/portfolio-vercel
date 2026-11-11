@@ -210,11 +210,12 @@
 - **Type:** Technical Task
 - **Description:** Ensure project content updates are straightforward for the owner.
 - **Acceptance Criteria:**
-  - [ ] Document how to add/edit manual projects and configure GitHub username/repo filters.
-  - [ ] Reasonable defaults chosen (e.g., show top N repos) and easy to adjust.
+  - [x] Document how to add/edit manual projects and configure GitHub username/repo filters.
+  - [x] Reasonable defaults chosen (e.g., show top N repos) and easy to adjust.
 - **Story Points:** 1
 - **Priority:** Medium
-- **Status:** Backlog
+- **Status:** Done
+- **Notes:** Documented project maintenance in `README.md` (manual project fields, GitHub username/limit, defaults and filtering). Defaults: exclude forks/archived/private, dedupe manual, sort by updated, limit from config. Verified build.
 
 ---
 

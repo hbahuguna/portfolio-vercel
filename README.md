@@ -78,10 +78,36 @@ This project is intended for **Vercel** with Git integration:
 Edit **`src/config/site.ts`** to update portfolio content in one place:
 
 - **Identity & intro:** `name`, `role`, `tagline`, `bio`
-- **About:** `about`
+- **About:** `about`, `skills`
 - **Contact & socials:** `contactEmail`, `socialLinks`
 - **Projects:** `manualProjects` (curated entries) and `githubUsername` / `githubReposLimit` (dynamic GitHub repos)
 - Replace placeholder URLs/text with your own information as you customize the site.
+
+### Maintaining projects
+
+**Manual/curated projects** (`manualProjects` array in `src/config/site.ts`):
+Each entry supports:
+- `title` (string, required)
+- `description` (string, required)
+- `tags` (string array) – technologies shown on the card
+- `repoUrl` (optional) – "View Code" link
+- `demoUrl` (optional) – "Live Demo" link
+- `image` (optional) – preview image path/URL
+- `featured` (optional boolean) – highlights the card
+
+To add a project, append a new object to the `manualProjects` array. To remove one, delete its entry.
+
+**Dynamic GitHub projects** (fetched client-side):
+- `githubUsername` – GitHub username to fetch repos from (default: `hbahuguna`).
+- `githubReposLimit` – max number of repos shown (default: `6`).
+
+Defaults applied by the fetcher:
+- Excludes **forks**, **archived**, and **private** repositories.
+- Deduplicates repos already listed in `manualProjects` (by URL).
+- Sorts by **most recently updated** first.
+- Shows language, stars, and last-updated date.
+
+To change filtering/sorting, edit the script in `src/components/Projects.astro`.
 
 ## Repository & commit conventions
 
