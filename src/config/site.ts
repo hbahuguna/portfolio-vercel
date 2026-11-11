@@ -28,6 +28,8 @@ export type ManualProject = {
 export const siteConfig = {
   /** Display name / owner name */
   name: "Himanshu Bahuguna",
+  /** Profile image path (place image in public/) */
+  profileImage: "/profile.jpg",
   /** Production site URL (used for canonical/OG URLs) */
   siteUrl: "https://himanshubahuguna-portfolio.vercel.app",
   /** GitHub username used for dynamic repository fetching */
