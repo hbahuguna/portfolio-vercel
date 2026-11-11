@@ -115,8 +115,7 @@ const manualProjects = siteConfig.manualProjects ?? [];
             const repos = results
               .filter((r) => r.status === 'fulfilled' && r.value)
               .map((r) => r.value)
-              .filter((r) => !r.fork && !r.archived && !r.private)
-              .filter((r) => !manualUrls.includes(r.html_url));
+              .filter((r) => !r.fork && !r.archived && !r.private);
 
             if (repos.length === 0) {
               setStatus('No pinned repositories found.');
