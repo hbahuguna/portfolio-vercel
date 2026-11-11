@@ -83,13 +83,27 @@ This project is intended for **Vercel** with Git integration (Hobby plan, non-co
 
 ```text
 /
-├── public/          # Static assets
+├── public/              # Static assets (favicon, OG image, robots.txt)
 ├── src/
-│   └── pages/       # File-based routes (.astro)
-├── astro.config.mjs
-├── package.json
-└── AGILE_BOARD.md   # Project plan and progress tracking
+│   ├── components/      # Astro components (ProjectCard, Projects)
+│   ├── config/          # site.ts - central content/metadata config
+│   ├── layouts/         # BaseLayout.astro
+│   ├── pages/           # index.astro (single-page portfolio)
+│   └── styles/          # global.css (design tokens + utilities)
+├── astro.config.mjs     # Astro config (site URL, sitemap)
+├── vercel.json          # Vercel config (clean URLs)
+├── AGILE_BOARD.md       # Project plan and progress tracking
+└── package.json
 ```
+
+## Known limitations & follow-ups
+
+- **GitHub API rate limits:** The client-side fetch uses the unauthenticated GitHub API (60 requests/hour per IP). For high-traffic sites, consider a build-time fetch or a serverless proxy with a token.
+- **Placeholder content:** All bio, project, social, and contact data are placeholders in `src/config/site.ts`. Replace before sharing publicly.
+- **Node version:** Developed on Node v22.22.2 with Astro 5. Vercel supports Node 20.x/22.x. If you upgrade Astro, ensure Node version compatibility.
+- **Single page:** The site is a single page. Add new pages under `src/pages/` if needed (Astro file-based routing).
+- **Dark mode toggle:** Theme preference is stored in `localStorage` and respects `prefers-color-scheme` by default.
+- **Image optimization:** Project images use native `<img>` with lazy loading. For heavy images, consider Astro's `<Image />` component.
 
 ## SEO & canonical URL
 

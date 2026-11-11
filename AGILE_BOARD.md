@@ -293,13 +293,14 @@
 - **Epic:** E6 – Deployment, QA & Final Review
 - **Description:** As the site owner, I want clear handoff notes so that I can maintain and update the portfolio after deployment.
 - **Acceptance Criteria:**
-  - [ ] Final board state reviewed; all completed items moved to `Done` with brief implementation notes.
-  - [ ] README updated with content editing guide, local dev, build, and Vercel deployment/update workflow.
-  - [ ] Known limitations/follow-ups listed (e.g., API rate limits, optional dark mode toggle enhancements).
-  - [ ] Confirmation that site is ready for/verified on `*.vercel.app` (or documented final manual step if credentials/access required).
+  - [x] Final board state reviewed; all completed items moved to `Done` with brief implementation notes.
+  - [x] README updated with content editing guide, local dev, build, and Vercel deployment/update workflow.
+  - [x] Known limitations/follow-ups listed (e.g., API rate limits, optional dark mode toggle enhancements).
+  - [x] Confirmation that site is ready for/verified on `*.vercel.app` (or documented final manual step if credentials/access required).
 - **Story Points:** 2
 - **Priority:** Medium
-- **Status:** Backlog
+- **Status:** Done
+- **Notes:** Final review complete. All 19 items (15 stories + 4 tasks) are marked Done. README includes content editing guide, local dev/build commands, Vercel deployment steps, project structure, SEO, and known limitations. Site builds successfully and is ready for Vercel import/deploy (owner must complete Vercel import via dashboard; repo is at `hbahuguna/portfolio-vercel`).
 
 ---
 
