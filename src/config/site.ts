@@ -348,55 +348,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
     repourl: "https://github.com/hbahuguna/kinva",
     featured: true,
   },
-  {
-    title: "chatgpt-app",
-    description:
-      "chat gpt app with prompt massaging",
-    tags: [
-      "JavaScript",
-      "Node",
-      "NPM",
-      "Python",
-    ],
-    repourl: "https://github.com/hbahuguna/chatgpt-app",
-    featured: true,
-  },
-  {
-    title: "b2b-marketplace",
-    description:
-      "A platform connecting manufacturers directly with retailers, cutting out middlemen.",
-    tags: [
-      "TypeScript",
-      "Shell",
-      "Docker",
-      "JaveScript",
-    ],
-    repourl: "https://github.com/hbahuguna/b2b-marketplace",
-    featured: true,
-  },
-  {
-    title: "smartbizchat",
-    description:
-      "Smart business chat widget with Docker, nginx, and Python backend",
-    tags: [
-      "HTML",
-      "Python",
-      "JaveScript",
-    ],
-    repourl: "https://github.com/hbahuguna/smartbizchat",
-    featured: true,
-  },
-  {
-    title: "private-blockchain",
-    description:
-      "Private blockchain application demonstrating blockchain fundamentals",
-    tags: [
-      "JaveScript",
-    ],
-    repourl: "https://github.com/hbahuguna/private-blockchain",
-    featured: true,
-  },
-  {
+    {
     title: "PromptCart",
     description:
       "An event-driven microservices platform that lets customers browse catalogs, place orders, and receive updates entirely through WhatsApp chat. Built as a distributed system with independent services handling catalog, orders, notifications, and conversational state.",
@@ -459,7 +411,55 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
     tags: ["Java", "Jacoco", "Code Coverage"],
     repoUrl: "https://github.com/hbahuguna/jacoco-integration-test-code-coverage",
     featured: true,
+  },{
+    title: "chatgpt-app",
+    description:
+      "chat gpt app with prompt massaging",
+    tags: [
+      "JavaScript",
+      "Node",
+      "NPM",
+      "Python",
+    ],
+    repourl: "https://github.com/hbahuguna/chatgpt-app",
+    featured: true,
   },
+  {
+    title: "b2b-marketplace",
+    description:
+      "A platform connecting manufacturers directly with retailers, cutting out middlemen.",
+    tags: [
+      "TypeScript",
+      "Shell",
+      "Docker",
+      "JaveScript",
+    ],
+    repourl: "https://github.com/hbahuguna/b2b-marketplace",
+    featured: true,
+  },
+  {
+    title: "smartbizchat",
+    description:
+      "Smart business chat widget with Docker, nginx, and Python backend",
+    tags: [
+      "HTML",
+      "Python",
+      "JaveScript",
+    ],
+    repourl: "https://github.com/hbahuguna/smartbizchat",
+    featured: true,
+  },
+  {
+    title: "private-blockchain",
+    description:
+      "Private blockchain application demonstrating blockchain fundamentals",
+    tags: [
+      "JaveScript",
+    ],
+    repourl: "https://github.com/hbahuguna/private-blockchain",
+    featured: true,
+  },
+
 
 
   ] as ManualProject[],
