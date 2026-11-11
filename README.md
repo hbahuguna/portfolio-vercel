@@ -75,7 +75,13 @@ This project is intended for **Vercel** with Git integration:
 
 ## Content updates
 
-Content/config placeholders (bio, links, projects) will be centralized as development progresses (see `AGILE_BOARD.md`, T-001). Replace placeholders with your own information in the documented config/data files.
+Edit **`src/config/site.ts`** to update portfolio content in one place:
+
+- **Identity & intro:** `name`, `role`, `tagline`, `bio`
+- **About:** `about`
+- **Contact & socials:** `contactEmail`, `socialLinks`
+- **Projects:** `manualProjects` (curated entries) and `githubUsername` / `githubReposLimit` (dynamic GitHub repos)
+- Replace placeholder URLs/text with your own information as you customize the site.
 
 ## Repository & commit conventions
 

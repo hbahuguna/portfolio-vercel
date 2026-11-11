@@ -72,13 +72,13 @@
 - **Type:** Technical Task
 - **Description:** Create a simple config/content structure for owner-editable data (name, bio, social links, manual projects).
 - **Acceptance Criteria:**
-  - [ ] Central place for site metadata/content placeholders (e.g., `src/config/site.ts` or JSON/Markdown data file).
-  - [ ] Includes placeholders for bio, role/tagline, social links, contact email, and manual projects list.
-  - [ ] Documented where to edit content.
+  - [x] Central place for site metadata/content placeholders (e.g., `src/config/site.ts` or JSON/Markdown data file).
+  - [x] Includes placeholders for bio, role/tagline, social links, contact email, and manual projects list.
+  - [x] Documented where to edit content.
 - **Story Points:** 2
 - **Priority:** High
-- **Status:** To Do
-- **Notes:** Queued next after US-002.
+- **Status:** Done
+- **Notes:** Added `src/config/site.ts` with typed placeholders for identity/intro, bio/about, contact email, social links, manual projects, and GitHub settings; documented editing location in `README.md`. Also update index in technical task table? T-001 status in table shows To Do - need to update for consistency. Let us fix.
 
 ---
 
@@ -291,7 +291,7 @@
 ## Technical Task Index (Cross-cutting)
 | ID | Title | Epic | Points | Priority | Status |
 |---|---|---|---|---|---|
-| T-001 | Define environment and content placeholders | E1 | 2 | High | To Do |
+| T-001 | Define environment and content placeholders | E1 | 2 | High | Done |
 | T-002 | Add static assets and favicon placeholders | E2 | 1 | Medium | Backlog |
 | T-003 | Make project data easy to maintain | E4 | 1 | Medium | Backlog |
 | T-004 | Add robots and sitemap basics (as applicable) | E5 | 1 | Low | Backlog |
