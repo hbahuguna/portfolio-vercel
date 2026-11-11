@@ -34,12 +34,109 @@ const manualProjects = siteConfig.manualProjects ?? [];
     <div class="github-projects" id="github-projects">
       <h3 class="subsection-title">From GitHub</h3>
       <p class="muted small">
-        Public repositories for <strong>{siteConfig.githubUsername}</strong> will load here.
+        Public repositories for <strong>{siteConfig.githubUsername}</strong> (fetched live from GitHub API).
       </p>
       <div class="projects-grid" id="github-projects-grid">
         <p class="muted" id="github-status">Loading repositories…</p>
       </div>
     </div>
+
+    <script is:inline define:vars={{ username: siteConfig.githubUsername, limit: siteConfig.githubReposLimit, manualUrls: siteConfig.manualProjects.map((p) => p.repoUrl).filter(Boolean) }}>
+      (function () {
+        const statusEl = document.getElementById('github-status');
+        const gridEl = document.getElementById('github-projects-grid');
+        if (!statusEl || !gridEl) return;
+
+        const escapeHtml = (value) =>
+          String(value ?? '')
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+
+        const formatDate = (iso) => {
+          if (!iso) return '';
+          try {
+            return new Date(iso).toLocaleDateString(undefined, { year: 'numeric', month: 'short' });
+          } catch {
+            return '';
+          }
+        };
+
+        const renderCard = (repo) => {
+          const tags = [repo.language].filter(Boolean);
+          const tagsHtml = tags.map((t) => `<li>${escapeHtml(t)}</li>`).join('');
+          return `
+            <article class="project-card card">
+              <div class="project-body">
+                <div class="project-header">
+                  <h3>${escapeHtml(repo.name)}</h3>
+                </div>
+                <p class="project-desc">${escapeHtml(repo.description || 'No description provided.')}</p>
+                ${tagsHtml ? `<ul class="project-tags" aria-label="Technologies">${tagsHtml}</ul>` : ''}
+                <p class="project-meta muted small">
+                  <span>★ ${repo.stargazers_count ?? 0}</span>
+                  ${repo.updated_at ? `<span>Updated ${escapeHtml(formatDate(repo.updated_at))}</span>` : ''}
+                </p>
+                <div class="project-actions">
+                  <a class="btn btn-secondary" href="${escapeHtml(repo.html_url)}" target="_blank" rel="noopener noreferrer">View Code</a>
+                  ${repo.homepage ? `<a class="btn btn-primary" href="${escapeHtml(repo.homepage)}" target="_blank" rel="noopener noreferrer">Live Demo</a>` : ''}
+                </div>
+              </div>
+            </article>
+          `;
+        };
+
+        const setStatus = (html) => {
+          gridEl.innerHTML = `<p class="muted" id="github-status">${html}</p>`;
+        };
+
+        const url = `https://api.github.com/users/${encodeURIComponent(username)}/repos?per_page=100&sort=updated`;
+
+        fetch(url, { headers: { Accept: 'application/vnd.github+json' } })
+          .then(async (res) => {
+            if (res.status === 403) {
+              const remaining = res.headers.get('X-RateLimit-Remaining');
+              if (remaining === '0') {
+                throw new Error('rate-limit');
+              }
+            }
+            if (!res.ok) {
+              throw new Error(`http-${res.status}`);
+            }
+            return res.json();
+          })
+          .then((repos) => {
+            if (!Array.isArray(repos)) {
+              throw new Error('invalid-response');
+            }
+
+            const filtered = repos
+              .filter((r) => r && !r.fork && !r.archived && !r.private)
+              .filter((r) => !manualUrls.includes(r.html_url))
+              .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
+              .slice(0, limit);
+
+            if (filtered.length === 0) {
+              setStatus('No public repositories found.');
+              return;
+            }
+
+            gridEl.innerHTML = filtered.map(renderCard).join('');
+          })
+          .catch((err) => {
+            const msg = String(err && err.message ? err.message : err);
+            if (msg === 'rate-limit') {
+              setStatus('GitHub API rate limit reached. Please try again later.');
+            } else if (msg === 'http-404') {
+              setStatus('GitHub user not found.');
+            } else {
+              setStatus('Unable to load repositories right now. Please try again later.');
+            }
+          });
+      })();
+    </script>
   </div>
 </section>
 

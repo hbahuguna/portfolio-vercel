@@ -196,13 +196,14 @@
 - **Epic:** E4 – Projects Integration (GitHub + Manual)
 - **Description:** As a visitor, I want to see recent/public GitHub projects so that I can explore the owner's work.
 - **Acceptance Criteria:**
-  - [ ] Client-side (or build-time, if appropriate) integration fetches public repositories for `hbahuguna` from GitHub API.
-  - [ ] Displays key repo info (name, description, language, stars, updated date, link) with sensible filtering/sorting (e.g., exclude forks/archived optionally, limit count).
-  - [ ] Handles loading, error, and rate-limit/empty states with user-friendly messages.
-  - [ ] Combined presentation with manual projects is clear (e.g., "Featured" and "From GitHub" subsections or merged with dedupe strategy).
+  - [x] Client-side (or build-time, if appropriate) integration fetches public repositories for `hbahuguna` from GitHub API.
+  - [x] Displays key repo info (name, description, language, stars, updated date, link) with sensible filtering/sorting (e.g., exclude forks/archived optionally, limit count).
+  - [x] Handles loading, error, and rate-limit/empty states with user-friendly messages.
+  - [x] Combined presentation with manual projects is clear (e.g., "Featured" and "From GitHub" subsections or merged with dedupe strategy).
 - **Story Points:** 5
 - **Priority:** High
-- **Status:** Backlog
+- **Status:** Done
+- **Notes:** Added client-side GitHub API fetch in `Projects.astro` (filtered forks/archived/private, deduped against manual projects, sorted by updated date, limited by config). Handles loading/error/rate-limit/empty states. Verified build.
 
 ### T-003 – Make project data easy to maintain
 - **Epic:** E4 – Projects Integration (GitHub + Manual)
