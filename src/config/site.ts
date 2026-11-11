@@ -68,7 +68,7 @@ export const siteConfig = {
   /** Short intro/bio placeholder (hero/about) */
   bio: "Founder at TestRadius, building AI that tests code like a human. I'm on a mission to eliminate flaky tests and help engineering teams ship faster with confidence. Previously, I built automation frameworks at IBM, BMC Software, People Inc. and Cohesity. I have a deep passion for AI, machine learning, and developer tools.",
   /** Longer about placeholder for the About section */
-  about: `I'm a builder at heart, currently focused on solving a problem I know intimately: the friction and frustration of unreliable software testing. As the founder of TestRadius, I'm developing an AI agent that explores UIs, adapts to changes, and validates goals—just like a human tester—to cut CI time by 80%.
+  about: `I'm a builder at heart, currently focused on solving a problem I know intimately: the friction and frustration of unreliable software testing. As the founder of TestRadius, I'm developing an AI agent that explores UIs, adapts to changes, and validates goals, just like a human tester, to cut CI time by 80%.
 
 My journey began as a Software Engineer at Ness Technologies, then I worked at BMC Software as staff SDET. I became an SDET Manager at People Inc, where I spent years connecting the dots between various automation frameworks and building robust systems for backup and recovery software at Cohesity. This hands-on experience gave me a deep understanding of the pain points that TestRadius is designed to solve.
 
