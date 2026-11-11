@@ -252,11 +252,12 @@
 - **Type:** Technical Task
 - **Description:** Provide basic crawl/indexing artifacts for static deployment.
 - **Acceptance Criteria:**
-  - [ ] `robots.txt` added (allow indexing by default, configurable).
-  - [ ] Sitemap generated or static sitemap added if supported by chosen stack; otherwise documented.
+  - [x] `robots.txt` added (allow indexing by default, configurable).
+  - [x] Sitemap generated or static sitemap added if supported by chosen stack; otherwise documented.
 - **Story Points:** 1
 - **Priority:** Low
-- **Status:** Backlog
+- **Status:** Done
+- **Notes:** Added `public/robots.txt` (allow indexing + sitemap reference) and `@astrojs/sitemap` integration in `astro.config.mjs` with `site` URL. Verified `sitemap-index.xml` and `sitemap-0.xml` generated in `dist/`. Verified build.
 
 ---
 
