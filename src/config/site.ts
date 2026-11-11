@@ -213,7 +213,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       degree: "Chief Technology Officer Program",
       startDate: "Nov 2023",
       endDate: "Jul 2024",
-      certificateUrl: "ISB_CTO.pdf",
+      certificateUrl: "/ISB_CTO.jpg",
     },
     {
       institution: "Stanford University Graduate School of Business",
@@ -226,7 +226,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
         "Identifying and Interviewing Your Customer",
         "Developing a Prototype",
       ],
-      certificateUrl: "StanfordCert.pdf",
+      certificateUrl: "/StanfordCert.jpg",
     },
     {
       institution: "buildspace",
@@ -235,7 +235,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       endDate: "Sep 2023",
       description:
         "Built OmniChat — a chat application that connects to multiple data sources. Demo: https://omnichat.streamlit.app/",
-      certificateUrl: "Buildspace-S4-cert.png",
+      certificateUrl: "/Buildspace-S4-cert.jpg",
     },
     {
       institution: "Govind Ballabh Pant Engineering College - India",
@@ -276,6 +276,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       degree: "Entrepreneurship",
       startDate: "Mar 2026",
       endDate: "Jun 2026",
+      certificateUrl: "/FounderInstitute.jpg",
     },
   ] as Education[],
   /** Primary contact email (used for mailto links) */
