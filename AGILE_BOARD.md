@@ -101,13 +101,14 @@
 - **Epic:** E2 – Design System & Layout Foundation
 - **Description:** As a developer, I want a consistent design system (colors, typography, spacing) so that the UI looks cohesive and is easy to maintain.
 - **Acceptance Criteria:**
-  - [ ] Global CSS variables/tokens for colors, typography, spacing, and breakpoints.
-  - [ ] Clean, professional default theme with good contrast; optional light/dark mode support (toggle or `prefers-color-scheme`) implemented if low-risk.
-  - [ ] Reusable utility/classes or component styles for buttons, cards, sections, and containers.
-  - [ ] Styles are responsive and avoid horizontal scrolling on common viewport sizes.
+  - [x] Global CSS variables/tokens for colors, typography, spacing, and breakpoints.
+  - [x] Clean, professional default theme with good contrast; optional light/dark mode support (toggle or `prefers-color-scheme`) implemented if low-risk.
+  - [x] Reusable utility/classes or component styles for buttons, cards, sections, and containers.
+  - [x] Styles are responsive and avoid horizontal scrolling on common viewport sizes.
 - **Story Points:** 3
 - **Priority:** Medium
-- **Status:** To Do
+- **Status:** Done
+- **Notes:** Formalized design tokens (colors, typography, spacing, radius, container) with light/dark support via `prefers-color-scheme` and manual toggle (persisted in localStorage). Added reusable utility classes (`section`, `card`, `btn`, `muted`, `eyebrow`, `container-narrow`) and a theme toggle control in header. Verified build.
 
 ### T-002 – Add static assets and favicon placeholders
 - **Epic:** E2 – Design System & Layout Foundation
