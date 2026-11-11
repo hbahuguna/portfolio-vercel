@@ -90,12 +90,35 @@ const description = siteConfig.tagline;
         </div>
       </div>
 
-      <div class="about-highlights">
-        <div class="card">
-          <h3>Education</h3>
-          <p class="muted">
-            Placeholder: Add your degree, institution, or relevant coursework/certifications.
-          </p>
+      <div class="about-education">
+        <h3>Education</h3>
+        <div class="experience-list">
+          {siteConfig.education.map((edu) => (
+            <div class="experience-card card">
+              <div class="experience-header">
+                <div>
+                  <h4 class="experience-role">{edu.degree}</h4>
+                  <p class="experience-company">{edu.institution}</p>
+                </div>
+                <div class="experience-meta">
+                  <span class="experience-dates">{edu.startDate} – {edu.endDate}</span>
+                </div>
+              </div>
+              {edu.description && <p class="experience-desc">{edu.description}</p>}
+              {edu.skills && edu.skills.length > 0 && (
+                <ul class="experience-skills" aria-label="Skills">
+                  {edu.skills.map((skill) => (
+                    <li class="skill-tag">{skill}</li>
+                  ))}
+                </ul>
+              )}
+              {edu.certificateUrl && (
+                <p class="muted small">
+                  Certificate: <a href={edu.certificateUrl} target="_blank" rel="noopener noreferrer">{edu.certificateUrl}</a>
+                </p>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </div>

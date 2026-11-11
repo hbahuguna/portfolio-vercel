@@ -10,6 +10,16 @@ export type SocialLink = {
   href: string;
 };
 
+export type Education = {
+  institution: string;
+  degree: string;
+  startDate: string;
+  endDate: string;
+  description?: string;
+  skills?: string[];
+  certificateUrl?: string;
+};
+
 export type Experience = {
   company: string;
   role: string;
@@ -196,6 +206,78 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
         "Software Engineer working on enterprise applications.",
     },
   ] as Experience[],
+  /** Education (newest first) */
+  education: [
+    {
+      institution: "Indian School of Business",
+      degree: "Chief Technology Officer Program",
+      startDate: "Nov 2023",
+      endDate: "Jul 2024",
+      certificateUrl: "ISB_CTO.pdf",
+    },
+    {
+      institution: "Stanford University Graduate School of Business",
+      degree: "Launching a Startup",
+      startDate: "Mar 2024",
+      endDate: "May 2024",
+      description:
+        "In this six-week program, I learned to research, craft, test, and transform ideas into viable business concepts. I dove deep into a four-step framework, The Startup Canvas, a proprietary tool developed at Stanford GSB as a way to systematize a pathway to market success.",
+      skills: [
+        "Identifying and Interviewing Your Customer",
+        "Developing a Prototype",
+      ],
+      certificateUrl: "StanfordCert.pdf",
+    },
+    {
+      institution: "buildspace",
+      degree: "Nights & Weekends S4",
+      startDate: "Aug 2023",
+      endDate: "Sep 2023",
+      description:
+        "Built OmniChat — a chat application that connects to multiple data sources. Demo: https://omnichat.streamlit.app/",
+      certificateUrl: "Buildspace-S4-cert.png",
+    },
+    {
+      institution: "Govind Ballabh Pant Engineering College - India",
+      degree: "B.E., Computer Science",
+      startDate: "2001",
+      endDate: "2005",
+      skills: ["Software Development"],
+    },
+    {
+      institution: "Udacity",
+      degree: "Android Developer",
+      startDate: "2016",
+      endDate: "2017",
+      skills: ["Java"],
+    },
+    {
+      institution: "Udacity",
+      degree: "AI",
+      startDate: "2017",
+      endDate: "2018",
+      skills: ["Python (Programming Language)", "Software Development"],
+    },
+    {
+      institution: "Udacity",
+      degree: "AI for Trading (Nanodegree)",
+      startDate: "Mar 2020",
+      endDate: "Jun 2020",
+      description: "Udacity AI for Trading NanoDegree.",
+    },
+    {
+      institution: "Udacity",
+      degree: "Mentorship, Student Counseling and Personnel Services",
+      startDate: "Jun 2020",
+      endDate: "Jul 2020",
+    },
+    {
+      institution: "Founder Institute",
+      degree: "Entrepreneurship",
+      startDate: "Mar 2026",
+      endDate: "Jun 2026",
+    },
+  ] as Education[],
   /** Primary contact email (used for mailto links) */
   contactEmail: "himbahuguna@gmail.com",
   /** Social/profile links */
