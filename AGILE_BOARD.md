@@ -115,12 +115,13 @@
 - **Type:** Technical Task
 - **Description:** Prepare basic assets required for branding and sharing.
 - **Acceptance Criteria:**
-  - [ ] Favicon/app icons placeholders added and referenced.
-  - [ ] Placeholder Open Graph/social preview image added.
-  - [ ] Asset paths work in dev and production builds.
+  - [x] Favicon/app icons placeholders added and referenced.
+  - [x] Placeholder Open Graph/social preview image added.
+  - [x] Asset paths work in dev and production builds.
 - **Story Points:** 1
 - **Priority:** Medium
-- **Status:** Backlog
+- **Status:** Done
+- **Notes:** Added `public/og-image.svg` placeholder and referenced favicon/app icons + OG/Twitter meta tags in `BaseLayout.astro`. Verified assets are copied to `dist/` and build succeeds.
 
 ---
 
