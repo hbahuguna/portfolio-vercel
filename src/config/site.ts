@@ -103,7 +103,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       endDate: "Present",
       location: "Remote",
       description:
-        "Building AI-powered test impact analysis — map, analyze, and execute only the tests that matter. Leading product development, customer development, and go-to-market strategy.",
+        "Building AI-powered test impact analysis, map, analyze, and execute only the tests that matter. Leading product development, customer development, and go-to-market strategy.",
       skills: [
         "Product Development",
         "Customer Development",
@@ -234,7 +234,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       startDate: "Aug 2023",
       endDate: "Sep 2023",
       description:
-        "Built OmniChat — a chat application that connects to multiple data sources. Demo: https://omnichat.streamlit.app/",
+        "Built OmniChat,  a chat application that connects to multiple data sources. Demo: https://omnichat.streamlit.app/",
       certificateUrl: "/Buildspace-S4-cert.jpg",
     },
     {
@@ -294,7 +294,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
     {
       title: "Test-Radius",
       description:
-        "Test Impact Analysis (TIA) that runs only the tests impacted by every code change. Powered by AST-based symbol resolution, Istanbul code coverage, and a Neo4j graph database. Deterministic, explainable, and open source. In a real-world validation on a mature Django monolith, TestRadius reduced required test runs from 735 to 42 — a 94% reduction — without missing a single relevant failure.",
+        "Test Impact Analysis (TIA) that runs only the tests impacted by every code change. Powered by AST-based symbol resolution, Istanbul code coverage, and a Neo4j graph database. Deterministic, explainable, and open source. In a real-world validation on a mature Django monolith, TestRadius reduced required test runs from 735 to 42, a 94% reduction, without missing a single relevant failure.",
       tags: ["Python",
       "FastAPI",
       "Neo4j",
@@ -323,7 +323,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
     {
     title: "assay",
     description:
-      "A deterministic, risk-based testing harness for release decisions. Inspects a source tree, operates a live target when a browser is available, stores hashed evidence, and emits a machine-readable confidence score. Five fixed phases — Risk Analysis, Test Planning, Execution, Evidence Collection, and Confidence Scoring — with no model deciding check order or scoring. Scoped engineering judgment, not a bug oracle.",
+      "A deterministic, risk-based testing harness for release decisions. Inspects a source tree, operates a live target when a browser is available, stores hashed evidence, and emits a machine-readable confidence score. Five fixed phases, Risk Analysis, Test Planning, Execution, Evidence Collection, and Confidence Scoring — with no model deciding check order or scoring. Scoped engineering judgment, not a bug oracle.",
     tags: [
       "Python",
       "Testing",
@@ -337,15 +337,63 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
     {
     title: "kinva",
     description:
-      "AI development skills for OpenCode. Kinva is Sanskrit for yeast — the agent that transforms raw ingredients into something greater. Four skills cover the full workflow: brainstorming (clarify fuzzy problems), vibe-coding (build fast through conversational loops), TDD (lock correctness before implementation), and debugging (find root causes cleanly).",
+      "ai development skills for opencode. kinva is sanskrit for yeast, the agent that transforms raw ingredients into something greater. four skills cover the full workflow: brainstorming (clarify fuzzy problems), vibe-coding (build fast through conversational loops), tdd (lock correctness before implementation), and debugging (find root causes cleanly).",
     tags: [
-      "AI Agents",
-      "OpenCode",
-      "Developer Tools",
-      "Prompt Engineering",
-      "TDD",
+      "ai agents",
+      "opencode",
+      "developer tools",
+      "prompt engineering",
+      "tdd",
     ],
-    repoUrl: "https://github.com/hbahuguna/kinva",
+    repourl: "https://github.com/hbahuguna/kinva",
+    featured: true,
+  },
+  {
+    title: "chatgpt-app",
+    description:
+      "chat gpt app with prompt massaging",
+    tags: [
+      "JavaScript",
+      "Node",
+      "NPM",
+      "Python",
+    ],
+    repourl: "https://github.com/hbahuguna/chatgpt-app",
+    featured: true,
+  },
+  {
+    title: "b2b-marketplace",
+    description:
+      "A platform connecting manufacturers directly with retailers, cutting out middlemen.",
+    tags: [
+      "TypeScript",
+      "Shell",
+      "Docker",
+      "JaveScript",
+    ],
+    repourl: "https://github.com/hbahuguna/b2b-marketplace",
+    featured: true,
+  },
+  {
+    title: "smartbizchat",
+    description:
+      "Smart business chat widget with Docker, nginx, and Python backend",
+    tags: [
+      "HTML",
+      "Python",
+      "JaveScript",
+    ],
+    repourl: "https://github.com/hbahuguna/smartbizchat",
+    featured: true,
+  },
+  {
+    title: "private-blockchain",
+    description:
+      "Private blockchain application demonstrating blockchain fundamentals",
+    tags: [
+      "JaveScript",
+    ],
+    repourl: "https://github.com/hbahuguna/private-blockchain",
     featured: true,
   },
   {
