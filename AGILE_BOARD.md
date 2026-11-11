@@ -88,13 +88,14 @@
 - **Epic:** E2 – Design System & Layout Foundation
 - **Description:** As a visitor, I want a clear, responsive navigation and consistent layout so that I can easily browse the site on any device.
 - **Acceptance Criteria:**
-  - [ ] Shared layout with header, main content area, and footer.
-  - [ ] Responsive navigation links to Hero, Projects, About, and Contact sections/pages.
-  - [ ] Mobile-friendly navigation behavior (e.g., collapsible menu or stacked layout) without layout breakage.
-  - [ ] Keyboard-accessible navigation (focus states, logical tab order).
+  - [x] Shared layout with header, main content area, and footer.
+  - [x] Responsive navigation links to Hero, Projects, About, and Contact sections/pages.
+  - [x] Mobile-friendly navigation behavior (e.g., collapsible menu or stacked layout) without layout breakage.
+  - [x] Keyboard-accessible navigation (focus states, logical tab order).
 - **Story Points:** 3
 - **Priority:** High
-- **Status:** To Do
+- **Status:** Done
+- **Notes:** Added `BaseLayout.astro` with sticky header, mobile nav toggle, main content area, and footer; implemented keyboard-accessible focus indicators and skip link. Updated `index.astro` to use the shared layout and anchor sections. Verified build.
 
 ### US-004 – Implement design tokens and global styles
 - **Epic:** E2 – Design System & Layout Foundation

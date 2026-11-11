@@ -1,16 +1,102 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../config/site';
+
+const title = `${siteConfig.name} – Portfolio`;
+const description = siteConfig.tagline;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={title} description={description}>
+  <section id="hero" class="section hero">
+    <div class="container">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1>{siteConfig.name}</h1>
+      <p class="role">{siteConfig.role}</p>
+      <p class="intro">{siteConfig.tagline}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <p class="muted">Featured and GitHub projects will appear here.</p>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About</h2>
+      <p>{siteConfig.about}</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="muted">Reach me at <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .section {
+    padding-block: var(--space-12);
+  }
+  .hero {
+    padding-block: var(--space-16);
+  }
+  .eyebrow {
+    color: var(--color-primary);
+    font-weight: 600;
+    margin: 0 0 var(--space-2);
+  }
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 0 0 var(--space-2);
+  }
+  .role {
+    font-size: 1.25rem;
+    color: var(--color-muted);
+    margin: 0 0 var(--space-4);
+  }
+  .intro {
+    max-width: 60ch;
+    margin: 0 0 var(--space-6);
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .btn-primary {
+    background: var(--color-primary);
+    color: var(--color-primary-contrast);
+  }
+  .btn-primary:hover {
+    text-decoration: none;
+    opacity: 0.9;
+  }
+  .btn-secondary {
+    background: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+  }
+  .muted {
+    color: var(--color-muted);
+  }
+  h2 {
+    margin-top: 0;
+  }
+</style>

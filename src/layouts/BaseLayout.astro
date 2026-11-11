@@ -1,0 +1,68 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Personal portfolio website for hbahuguna.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="/">hbahuguna</a>
+        <nav aria-label="Primary" class="site-nav">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span aria-hidden="true">☰</span>
+          </button>
+          <ul id="nav-links" class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="site-main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; {new Date().getFullYear()} hbahuguna. All rights reserved.</p>
+        <p class="footer-links">
+          <a href="https://github.com/hbahuguna" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span aria-hidden="true">·</span>
+          <a href="mailto:you@example.com">Contact</a>
+        </p>
+      </div>
+    </footer>
+
+    <script is:inline>
+      (function () {
+        const btn = document.querySelector('.nav-toggle');
+        const links = document.getElementById('nav-links');
+        if (!btn || !links) return;
+        btn.addEventListener('click', () => {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          links.classList.toggle('open');
+        });
+      })();
+    </script>
+  </body>
+</html>
