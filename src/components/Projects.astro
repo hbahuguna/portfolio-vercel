@@ -112,13 +112,22 @@ const manualProjects = siteConfig.manualProjects ?? [];
 
         Promise.allSettled(pinnedRepos.map(fetchRepo))
           .then((results) => {
+            const failed = results.filter((r) => r.status === 'rejected');
+            if (failed.length > 0) {
+              console.warn('Some repos failed to load:', failed.map((r) => r.reason?.message));
+            }
+
             const repos = results
               .filter((r) => r.status === 'fulfilled' && r.value)
               .map((r) => r.value)
               .filter((r) => !r.fork && !r.archived && !r.private);
 
             if (repos.length === 0) {
-              setStatus('No pinned repositories found.');
+              if (failed.length === pinnedRepos.length) {
+                setStatus('Unable to load repositories. The GitHub API may be rate-limited. Please try again later.');
+              } else {
+                setStatus('No pinned repositories found.');
+              }
               return;
             }
 
@@ -126,6 +135,7 @@ const manualProjects = siteConfig.manualProjects ?? [];
           })
           .catch((err) => {
             const msg = String(err && err.message ? err.message : err);
+            console.error('GitHub fetch error:', msg);
             if (msg === 'rate-limit') {
               setStatus('GitHub API rate limit reached. Please try again later.');
             } else if (msg === 'http-404') {

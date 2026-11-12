@@ -8,6 +8,7 @@ const description = siteConfig.tagline;
 ---
 
 <BaseLayout title={title} description={description}>
+  <!-- Hero -->
   <section id="hero" class="section hero">
     <div class="container hero-inner">
       <div class="hero-text">
@@ -16,8 +17,8 @@ const description = siteConfig.tagline;
         <p class="role">{siteConfig.role}</p>
         <p class="intro">{siteConfig.bio}</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">View Projects</a>
-          <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+          <a class="btn btn-primary" href={siteConfig.gettingStarted.ctaLink}>{siteConfig.gettingStarted.ctaText}</a>
+          <a class="btn btn-secondary" href="#projects">View Projects</a>
         </div>
         <ul class="hero-social" aria-label="Social links">
           {siteConfig.socialLinks.map((link) => (
@@ -40,8 +41,71 @@ const description = siteConfig.tagline;
     </div>
   </section>
 
+  <!-- Stats -->
+  <section class="section stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        {siteConfig.stats.map((stat) => (
+          <div class="stat-card">
+            <span class="stat-value">{stat.value}</span>
+            <span class="stat-label">{stat.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Services</h2>
+      <p class="muted">What I can help you build.</p>
+      <div class="services-grid">
+        {siteConfig.services.map((service) => (
+          <div class="card service-card">
+            <span class="service-icon">{service.icon}</span>
+            <h3>{service.title}</h3>
+            <p class="muted">{service.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
   <Projects />
 
+  <!-- Case Studies -->
+  <section id="case-studies" class="section">
+    <div class="container">
+      <h2>Case Studies</h2>
+      <p class="muted">Problem → What we built → Result.</p>
+      <div class="case-studies-list">
+        {siteConfig.caseStudies.map((cs) => (
+          <div class="card case-study-card">
+            <h3>{cs.title}</h3>
+            <div class="case-study-block">
+              <span class="case-label">Problem</span>
+              <p>{cs.problem}</p>
+            </div>
+            <div class="case-study-block">
+              <span class="case-label">What we built</span>
+              <p>{cs.solution}</p>
+            </div>
+            <div class="case-study-block">
+              <span class="case-label">Result</span>
+              <p>{cs.result}</p>
+            </div>
+            {cs.link && (
+              <a class="btn btn-secondary" href={cs.link} target="_blank" rel="noopener noreferrer">View Case Study →</a>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
   <section id="about" class="section">
     <div class="container">
       <h2>About</h2>
@@ -121,6 +185,56 @@ const description = siteConfig.tagline;
     </div>
   </section>
 
+  <!-- Testimonials -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2>Testimonials</h2>
+      <p class="muted">What people say.</p>
+      <div class="testimonials-grid">
+        {siteConfig.testimonials.map((t) => (
+          <div class="card testimonial-card">
+            <p class="testimonial-quote">"{t.quote}"</p>
+            <div class="testimonial-author">
+              <strong>{t.name}</strong>
+              <span class="muted small">{t.role}, {t.company}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        {siteConfig.faq.map((item) => (
+          <details class="faq-item card">
+            <summary>{item.question}</summary>
+            <p>{item.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Start -->
+  <section id="start" class="section">
+    <div class="container">
+      <div class="card start-card">
+        <h2>How to Get Started</h2>
+        <p>{siteConfig.gettingStarted.freeCall}</p>
+        <p class="muted">{siteConfig.gettingStarted.startingPrice}</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href={siteConfig.gettingStarted.ctaLink}>{siteConfig.gettingStarted.ctaText}</a>
+          <a class="btn btn-secondary" href="#contact">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
   <section id="contact" class="section">
     <div class="container">
       <h2>Contact</h2>
@@ -151,9 +265,10 @@ const description = siteConfig.tagline;
           </ul>
         </div>
 
-        <form class="contact-form card" action={`mailto:${siteConfig.contactEmail}`} method="post" enctype="text/plain">
+        <form class="contact-form card" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <h3>Send a message</h3>
-          <p class="muted small">This form opens your email client (no backend required).</p>
+          <p class="muted small">Messages are sent directly via Formspree. Replace YOUR_FORM_ID in the form action with your own Formspree form ID for production use.</p>
+          <input type="hidden" name="_subject" value="New contact from portfolio" />
           <label>
             <span>Name</span>
             <input type="text" name="name" placeholder="Your name" required />
@@ -168,6 +283,20 @@ const description = siteConfig.tagline;
           </label>
           <button type="submit" class="btn btn-primary">Send</button>
         </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="section bottom-cta">
+    <div class="container">
+      <div class="card cta-card">
+        <h2>Ready to start?</h2>
+        <p class="muted">Let's build something great together.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href={siteConfig.gettingStarted.ctaLink}>{siteConfig.gettingStarted.ctaText}</a>
+          <a class="btn btn-secondary" href="#contact">Contact Me</a>
+        </div>
       </div>
     </div>
   </section>
@@ -242,6 +371,90 @@ const description = siteConfig.tagline;
   h2 {
     margin-top: 0;
   }
+
+  /* Stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+  @media (min-width: 720px) {
+    .stats-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .stat-card {
+    text-align: center;
+    padding: var(--space-6);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+  }
+  .stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+  .stat-label {
+    display: block;
+    margin-top: var(--space-2);
+    font-size: 0.9rem;
+    color: var(--color-muted);
+  }
+
+  /* Services */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    margin-top: var(--space-6);
+  }
+  @media (min-width: 720px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .service-card {
+    text-align: center;
+  }
+  .service-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: var(--space-3);
+  }
+  .service-card h3 {
+    margin-top: 0;
+  }
+
+  /* Case Studies */
+  .case-studies-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    margin-top: var(--space-6);
+  }
+  .case-study-card h3 {
+    margin-top: 0;
+  }
+  .case-study-block {
+    margin-bottom: var(--space-4);
+  }
+  .case-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    margin-bottom: var(--space-1);
+  }
+  .case-study-block p {
+    margin: 0;
+    color: var(--color-muted);
+  }
+
+  /* About */
   .about-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -257,7 +470,8 @@ const description = siteConfig.tagline;
     margin-bottom: var(--space-4);
   }
   .about-skills h3,
-  .about-highlights h3 {
+  .about-experience h3,
+  .about-education h3 {
     margin-top: 0;
   }
   .skill-list {
@@ -275,23 +489,6 @@ const description = siteConfig.tagline;
     padding: var(--space-1) var(--space-3);
     font-size: 0.9rem;
     color: var(--color-text);
-  }
-  .about-highlights {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
-  }
-  @media (min-width: 720px) {
-    .about-highlights {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  .about-experience {
-    margin-bottom: var(--space-8);
-  }
-  .about-experience h3 {
-    margin-bottom: var(--space-4);
   }
   .experience-list {
     display: flex;
@@ -347,7 +544,89 @@ const description = siteConfig.tagline;
   .experience-skills .skill-tag {
     font-size: 0.8rem;
   }
+  .cert-link {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
 
+  /* Testimonials */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    margin-top: var(--space-6);
+  }
+  @media (min-width: 720px) {
+    .testimonials-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .testimonial-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonial-quote {
+    font-style: italic;
+    color: var(--color-muted);
+    flex: 1;
+    margin: 0 0 var(--space-4);
+  }
+  .testimonial-author {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  /* FAQ */
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+  }
+  .faq-item {
+    padding: var(--space-4) var(--space-6);
+  }
+  .faq-item summary {
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+  }
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-item summary::before {
+    content: "+ ";
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+  .faq-item[open] summary::before {
+    content: "− ";
+  }
+  .faq-item p {
+    margin-top: var(--space-3);
+    color: var(--color-muted);
+  }
+
+  /* How to Start */
+  .start-card {
+    text-align: center;
+    padding: var(--space-8);
+  }
+  .start-card h2 {
+    margin-top: 0;
+  }
+
+  /* Bottom CTA */
+  .bottom-cta .cta-card {
+    text-align: center;
+    padding: var(--space-8);
+  }
+  .cta-card h2 {
+    margin-top: 0;
+  }
+
+  /* Contact */
   .contact-grid {
     display: grid;
     grid-template-columns: 1fr;

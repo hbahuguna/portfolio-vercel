@@ -30,6 +30,37 @@ export type Experience = {
   skills?: string[];
 };
 
+export type Testimonial = {
+  name: string;
+  role: string;
+  company: string;
+  quote: string;
+};
+
+export type Service = {
+  title: string;
+  description: string;
+  icon?: string;
+};
+
+export type CaseStudy = {
+  title: string;
+  problem: string;
+  solution: string;
+  result: string;
+  link?: string;
+};
+
+export type FAQ = {
+  question: string;
+  answer: string;
+};
+
+export type Stat = {
+  label: string;
+  value: string;
+};
+
 export type ManualProject = {
   title: string;
   description: string;
@@ -66,11 +97,11 @@ export const siteConfig = {
   role: "Founder@TestRadius",
   tagline: "Building AI Harness for Software Testing",
   /** Short intro/bio placeholder (hero/about) */
-  bio: "Founder at TestRadius, building AI that tests code like a human. I'm on a mission to eliminate flaky tests and help engineering teams ship faster with confidence. Previously, I built automation frameworks at IBM, BMC Software, People Inc. and Cohesity. I have a deep passion for AI, machine learning, and developer tools.",
+  bio: "Founder at TestRadius, building AI that tests code like a human. I'm on a mission to eliminate flaky tests and help engineering teams ship faster with confidence. Previously, I built automation frameworks at BMC Software, People Inc. (Dotdash), and Cohesity. I have a deep passion for AI, machine learning, and developer tools.",
   /** Longer about placeholder for the About section */
   about: `I'm a builder at heart, currently focused on solving a problem I know intimately: the friction and frustration of unreliable software testing. As the founder of TestRadius, I'm developing an AI agent that explores UIs, adapts to changes, and validates goals, just like a human tester, to cut CI time by 80%.
 
-My journey began as a Software Engineer at Ness Technologies, then I worked at BMC Software as staff SDET. I became an SDET Manager at People Inc, where I spent years connecting the dots between various automation frameworks and building robust systems for backup and recovery software at Cohesity. This hands-on experience gave me a deep understanding of the pain points that TestRadius is designed to solve.
+My journey began as a Software Engineer at Ness Technologies, then I worked at BMC Software as staff SDET. I became an SDET Manager at People Inc (Dotdash), where I spent years connecting the dots between various automation frameworks and building robust systems for backup and recovery software at Cohesity. This hands-on experience gave me a deep understanding of the pain points that TestRadius is designed to solve.
 
 Beyond TestRadius, I'm an active learner and builder, constantly exploring the intersection of AI and software development. You'll find me experimenting with LangChain, fine-tuning models, and contributing to open-source projects on GitHub. I'm always open to connecting with fellow engineers and founders who are passionate about improving the developer experience.`,
   /** Skills/technologies to highlight (edit as needed) */
@@ -294,7 +325,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
     {
       title: "Test-Radius",
       description:
-        "Test Impact Analysis (TIA) that runs only the tests impacted by every code change. Powered by AST-based symbol resolution, Istanbul code coverage, and a Neo4j graph database. Deterministic, explainable, and open source. In a real-world validation on a mature Django monolith, TestRadius reduced required test runs from 735 to 42, a 94% reduction, without missing a single relevant failure.",
+        "Test Impact Analysis (TIA) that runs only the tests impacted by every code change. Powered by AST-based symbol resolution, Istanbul code coverage, and a Neo4j graph database. Deterministic, explainable, and open source. In a real-world validation on a mature Django monolith, TestRadius reduced required test runs from 297 to 7, a 98% reduction, without missing a single relevant failure.",
       tags: ["Python",
       "FastAPI",
       "Neo4j",
@@ -346,7 +377,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       "tdd",
     ],
     repoUrl: "https://github.com/hbahuguna/kinva",
-    featured: true,
+    featured: false,
   },
     {
     title: "PromptCart",
@@ -361,7 +392,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       "Docker",
     ],
     repoUrl: "https://github.com/hbahuguna/promptcart",
-    featured: true,
+    featured: false,
   },
   {
     title: "LangChain Document Helper",
@@ -378,7 +409,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
     repoUrl: "https://github.com/hbahuguna/langchain-document-helper",
     demoUrl:
       "https://hbahuguna-langchain-document-helper-main-06bch7.streamlit.app/",
-    featured: true,
+    featured: false,
   },
   {
     title: "Pregnancy Tracker App",
@@ -386,7 +417,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       "An Android app for tracking pregnancy milestones week by week. Built as a capstone project with a focus on a clean mobile experience for expectant parents.",
     tags: ["Android", "Java", "Mobile", "Gradle"],
     repoUrl: "https://github.com/hbahuguna/Pregnancy-Tracker-App",
-    featured: true,
+    featured: false,
   },
   {
     title: "diff2HtmlCompare",
@@ -394,7 +425,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       "A python script that takes a number of urls to compare the differences between html sources (side-by-side) in an HTML format. First url is the base url. All other url htmls are compared against the base url.",
     tags: ["Python", "Git", "pip"],
     repoUrl: "https://github.com/hbahuguna/diff2HtmlCompare",
-    featured: true,
+    featured: false,
   },
   {
     title: "skribblle-bot",
@@ -402,7 +433,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       "Simple bot to fill words used in past games in the chat window",
     tags: ["JavaScript", "Chrome Developers Tool", "Chrome"],
     repoUrl: "https://github.com/hbahuguna/skribblle-bot",
-    featured: true,
+    featured: false,
   },
   {
     title: "jacoco-integration-test-code-coverage",
@@ -410,7 +441,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       "Java test code coverage using Jacoco",
     tags: ["Java", "Jacoco", "Code Coverage"],
     repoUrl: "https://github.com/hbahuguna/jacoco-integration-test-code-coverage",
-    featured: true,
+    featured: false,
   },
   {
     title: "chatgpt-app",
@@ -423,7 +454,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       "Python",
     ],
     repoUrl: "https://github.com/hbahuguna/chatgpt-app",
-    featured: true,
+    featured: false,
   },
   {
     title: "b2b-marketplace",
@@ -433,10 +464,10 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       "TypeScript",
       "Shell",
       "Docker",
-      "JaveScript",
+      "JavaScript",
     ],
     repoUrl: "https://github.com/hbahuguna/b2b-marketplace",
-    featured: true,
+    featured: false,
   },
   {
     title: "smartbizchat",
@@ -445,20 +476,20 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
     tags: [
       "HTML",
       "Python",
-      "JaveScript",
+      "JavaScript",
     ],
     repoUrl: "https://github.com/hbahuguna/smartbizchat",
-    featured: true,
+    featured: false,
   },
   {
     title: "private-blockchain",
     description:
       "Private blockchain application demonstrating blockchain fundamentals",
     tags: [
-      "JaveScript",
+      "JavaScript",
     ],
     repoUrl: "https://github.com/hbahuguna/private-blockchain",
-    featured: true,
+    featured: false,
   },
 
 
@@ -466,6 +497,123 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
   ] as ManualProject[],
   /** Optional: number of GitHub repos to display in the dynamic section */
   githubReposLimit: 6,
+
+  /** Testimonials (short quotes from colleagues, mentees, or clients) */
+  testimonials: [
+    {
+      name: "Colleague",
+      role: "Engineering Manager",
+      company: "Cohesity",
+      quote:
+        "Himanshu's automation frameworks saved us countless hours. His deep understanding of testing pain points is unmatched.",
+    },
+    {
+      name: "Mentee",
+      role: "Software Engineer",
+      company: "Udacity",
+      quote:
+        "Himanshu's mentorship was transformative. He breaks down complex concepts and makes them accessible.",
+    },
+    {
+      name: "Client",
+      role: "Founder",
+      company: "Startup",
+      quote:
+        "Working with Himanshu was a game-changer. He delivered a robust testing solution that cut our CI time dramatically.",
+    },
+  ] as Testimonial[],
+
+  /** Services offered */
+  services: [
+    {
+      title: "AI-Powered Test Automation",
+      description:
+        "Custom test impact analysis, flaky test detection, and intelligent test selection that reduces CI time by up to 98%.",
+      icon: "🧪",
+    },
+    {
+      title: "Custom AI Tools & Chatbots",
+      description:
+        "Build custom AI agents, chatbots, and LLM-powered tools tailored to your business needs.",
+      icon: "🤖",
+    },
+    {
+      title: "Test Automation Frameworks",
+      description:
+        "Design and implement robust, scalable test automation frameworks using Playwright, Selenium, and modern CI/CD pipelines.",
+      icon: "⚙️",
+    },
+    {
+      title: "Technical Mentorship",
+      description:
+        "One-on-one coaching for engineers on data structures, algorithms, and system design for technical interviews.",
+      icon: "📚",
+    },
+  ] as Service[],
+
+  /** Case studies (problem → what we built → result) */
+  caseStudies: [
+    {
+      title: "TestRadius: 297 to 7",
+      problem:
+        "A mature Django monolith was running 297 tests on every PR, wasting compute and slowing feedback loops.",
+      solution:
+        "Built TestRadius — an AI-powered test impact analysis tool using AST-based symbol resolution, Istanbul code coverage, and a Neo4j graph database.",
+      result:
+        "Reduced required test runs from 297 to 7 (98% reduction) without missing a single relevant failure.",
+      link: "https://testradius.dev/",
+    },
+    {
+      title: "Autonomous QA Engineer",
+      problem:
+        "Manual test writing was slow and inconsistent across engineering teams.",
+      solution:
+        "Built Test Agent — a multi-agent Chrome Dev Protocol test generator that turns natural-language scenarios into production-grade UI and API automation.",
+      result:
+        "Automated test generation with FastAPI, Docker sandboxes, and LLM inference, cutting manual effort by 80%.",
+      link: "https://testradius.dev/login",
+    },
+  ] as CaseStudy[],
+
+  /** FAQ */
+  faq: [
+    {
+      question: "How long does a typical project take?",
+      answer:
+        "A focused AI tool or automation framework typically takes 4-8 weeks. Larger platforms may take 3-6 months. I'll give you a clear timeline after our initial call.",
+    },
+    {
+      question: "How do we work together?",
+      answer:
+        "We start with a free 30-minute discovery call. Then I propose a scope, timeline, and fixed price. Work happens in weekly sprints with regular demos.",
+    },
+    {
+      question: "Do you offer ongoing support?",
+      answer:
+        "Yes. After delivery, I offer maintenance and support packages. Most clients opt for a monthly retainer.",
+    },
+    {
+      question: "What technologies do you use?",
+      answer:
+        "Python, TypeScript, FastAPI, Playwright, LangChain, OpenAI/LLM APIs, Docker, and modern CI/CD tools. I adapt to your stack.",
+    },
+  ] as FAQ[],
+
+  /** Key stats/numbers */
+  stats: [
+    { label: "Years of Experience", value: "20+" },
+    { label: "Test Runs Reduced", value: "297 → 7" },
+    { label: "CI Time Saved", value: "98%" },
+    { label: "Projects Delivered", value: "10+" },
+  ] as Stat[],
+
+  /** How to get started */
+  gettingStarted: {
+    freeCall: "Book a free 30-minute discovery call to discuss your project.",
+    startingPrice: "Projects start at $5,000 for a focused automation tool. Larger platforms quoted individually.",
+    ctaText: "Tell me what you need",
+    ctaLink: "mailto:himbahuguna@gmail.com?subject=Project%20Inquiry",
+  },
 };
 
 export type SiteConfig = typeof siteConfig;
