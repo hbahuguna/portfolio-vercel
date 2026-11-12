@@ -561,7 +561,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
         "Built TestRadius, an AI-powered test impact analysis tool using AST-based symbol resolution, Istanbul code coverage, and a Neo4j graph database.",
       result:
         "Reduced required test runs from 297 to 7 (98% reduction) without missing a single relevant failure.",
-      link: "https://testradius.dev/",
+      link: "https://testradius.dev/blog/code-coverage-tia-article",
     },
     {
       title: "Autonomous QA Engineer",
@@ -571,7 +571,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
         "Built Test Agent, a multi-agent Chrome Dev Protocol test generator that turns natural-language scenarios into production-grade UI and API automation.",
       result:
         "Automated test generation with FastAPI, Docker sandboxes, and LLM inference, cutting manual effort by 80%.",
-      link: "https://testradius.dev/login",
+      link: "https://testradius.dev/blog/sdet-model-journey",
     },
   ] as CaseStudy[],
 
