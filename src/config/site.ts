@@ -179,7 +179,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       skills: ["Data Structures and Algorithms"],
     },
     {
-      company: "Dotdash Meredith",
+      company: "People Inc.",
       role: "Sr. Manager SDET",
       startDate: "Jan 2022",
       endDate: "Oct 2022",
@@ -189,7 +189,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       skills: ["Java"],
     },
     {
-      company: "Dotdash",
+      company: "People Inc.",
       role: "Manager SDET",
       startDate: "Mar 2020",
       endDate: "Jan 2022",
@@ -199,7 +199,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       skills: ["Java"],
     },
     {
-      company: "Dotdash",
+      company: "People Inc.",
       role: "Lead SDET",
       startDate: "Oct 2019",
       endDate: "Mar 2020",
@@ -209,7 +209,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       skills: ["Java", "Software Development"],
     },
     {
-      company: "Dotdash",
+      company: "People Inc.",
       role: "Senior Software QA Engineer",
       startDate: "Sep 2014",
       endDate: "Sep 2019",
@@ -325,7 +325,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
     {
       title: "Test-Radius",
       description:
-        "Test Impact Analysis (TIA) that runs only the tests impacted by every code change. Powered by AST-based symbol resolution, Istanbul code coverage, and a Neo4j graph database. Deterministic, explainable, and open source. In a real-world validation on a mature Django monolith, TestRadius reduced required test runs from 297 to 7, a 98% reduction, without missing a single relevant failure.",
+        "Test Impact Analysis (TIA) that runs only the tests impacted by every code change. Powered by AST-based symbol resolution, Istanbul code coverage, and a Neo4j graph database. Deterministic, explainable, and open source. In a real-world validation on a mature py-key-value codebase, TestRadius reduced required test runs from 297 to 7, a 98% reduction, without missing a single relevant failure.",
       tags: ["Python",
       "FastAPI",
       "Neo4j",
@@ -501,25 +501,25 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
   /** Testimonials (short quotes from colleagues, mentees, or clients) */
   testimonials: [
     {
-      name: "Colleague",
-      role: "Engineering Manager",
-      company: "Cohesity",
+      name: "Gaurish Siwatch",
+      role: "Software Engineer",
+      company: "BMC Software",
       quote:
-        "Himanshu's automation frameworks saved us countless hours. His deep understanding of testing pain points is unmatched.",
+        "Himanshu's deep expertise in test automation and his ability to build robust frameworks saved our team countless hours. His understanding of testing pain points is unmatched.",
     },
     {
-      name: "Mentee",
-      role: "Software Engineer",
+      name: "Jessica Fernandese",
+      role: "Mentee",
       company: "Udacity",
       quote:
-        "Himanshu's mentorship was transformative. He breaks down complex concepts and makes them accessible.",
+        "Himanshu's mentorship was transformative. He breaks down complex concepts and makes them accessible, helping me grow as an engineer.",
     },
     {
-      name: "Client",
-      role: "Founder",
+      name: "Mark Giresi",
+      role: "Client",
       company: "Startup",
       quote:
-        "Working with Himanshu was a game-changer. He delivered a robust testing solution that cut our CI time dramatically.",
+        "Working with Himanshu was a game-changer. He delivered a robust testing solution that cut our CI time dramatically and gave us confidence in every release.",
     },
   ] as Testimonial[],
 
@@ -556,9 +556,9 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
     {
       title: "TestRadius: 297 to 7",
       problem:
-        "A mature Django monolith was running 297 tests on every PR, wasting compute and slowing feedback loops.",
+        "A mature py-key-value codebase was running 297 tests on every PR, wasting compute and slowing feedback loops.",
       solution:
-        "Built TestRadius — an AI-powered test impact analysis tool using AST-based symbol resolution, Istanbul code coverage, and a Neo4j graph database.",
+        "Built TestRadius, an AI-powered test impact analysis tool using AST-based symbol resolution, Istanbul code coverage, and a Neo4j graph database.",
       result:
         "Reduced required test runs from 297 to 7 (98% reduction) without missing a single relevant failure.",
       link: "https://testradius.dev/",
@@ -568,7 +568,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
       problem:
         "Manual test writing was slow and inconsistent across engineering teams.",
       solution:
-        "Built Test Agent — a multi-agent Chrome Dev Protocol test generator that turns natural-language scenarios into production-grade UI and API automation.",
+        "Built Test Agent, a multi-agent Chrome Dev Protocol test generator that turns natural-language scenarios into production-grade UI and API automation.",
       result:
         "Automated test generation with FastAPI, Docker sandboxes, and LLM inference, cutting manual effort by 80%.",
       link: "https://testradius.dev/login",
