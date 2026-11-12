@@ -612,7 +612,7 @@ Beyond TestRadius, I'm an active learner and builder, constantly exploring the i
     freeCall: "Book a free 30-minute discovery call to discuss your project.",
     startingPrice: "Projects start at $5,000 for a focused automation tool. Larger platforms quoted individually.",
     ctaText: "Tell me what you need",
-    ctaLink: "mailto:himbahuguna@gmail.com?subject=Project%20Inquiry",
+    ctaLink: "https://zcal.co/i/suLjJzcq",
   },
 };
 
