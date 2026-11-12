@@ -104,6 +104,38 @@ export const siteConfig = {
 My journey began as a Software Engineer at Ness Technologies, then I worked at BMC Software as staff SDET. I became an SDET Manager at People Inc (Dotdash), where I spent years connecting the dots between various automation frameworks and building robust systems for backup and recovery software at Cohesity. This hands-on experience gave me a deep understanding of the pain points that TestRadius is designed to solve.
 
 Beyond TestRadius, I'm an active learner and builder, constantly exploring the intersection of AI and software development. You'll find me experimenting with LangChain, fine-tuning models, and contributing to open-source projects on GitHub. I'm always open to connecting with fellow engineers and founders who are passionate about improving the developer experience.`,
+  /** Skills by category (for tabbed display) */
+  skillCategories: {
+    "AI & ML": [
+      "LangChain",
+      "LLM Fine-tuning",
+      "AI Engineering",
+      "OpenCode",
+      "Agentic Development Workflows",
+      "AI-Driven Testing",
+    ],
+    "Testing & QA": [
+      "Test Automation",
+      "Test Impact Analysis",
+      "Flaky Test Detection",
+      "Playwright",
+      "Selenium",
+      "CI/CD",
+      "GitHub Actions",
+    ],
+    "Backend & Languages": [
+      "Python",
+      "Node.js",
+      "TypeScript",
+      "REST APIs",
+      "FastAPI",
+    ],
+    "DevOps & Tools": [
+      "Docker",
+      "Git",
+      "Neo4j",
+    ],
+  } as Record<string, string[]>,
   /** Skills/technologies to highlight (edit as needed) */
   skills: [
     "LangChain",

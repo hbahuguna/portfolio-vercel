@@ -115,11 +115,20 @@ const description = siteConfig.tagline;
         </div>
         <div class="about-skills">
           <h3>Skills &amp; Technologies</h3>
-          <ul class="skill-list" aria-label="Skills">
-            {siteConfig.skills.map((skill) => (
-              <li class="skill-tag">{skill}</li>
+          <div class="skills-tabs" role="tablist">
+            {Object.keys(siteConfig.skillCategories).map((cat, i) => (
+              <button class={`skill-tab ${i === 0 ? 'active' : ''}`} role="tab" data-tab={cat}>{cat}</button>
             ))}
-          </ul>
+          </div>
+          {Object.entries(siteConfig.skillCategories).map(([cat, skills], i) => (
+            <div class={`skill-panel ${i === 0 ? 'active' : ''}`} data-panel={cat}>
+              <div class="skill-grid">
+                {skills.map((skill) => (
+                  <div class="skill-item">{skill}</div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -300,6 +309,23 @@ const description = siteConfig.tagline;
       </div>
     </div>
   </section>
+
+  <script is:inline>
+    (function () {
+      const tabs = document.querySelectorAll('.skill-tab');
+      const panels = document.querySelectorAll('.skill-panel');
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const target = tab.getAttribute('data-tab');
+          tabs.forEach((t) => t.classList.remove('active'));
+          panels.forEach((p) => p.classList.remove('active'));
+          tab.classList.add('active');
+          const panel = document.querySelector(`[data-panel="${target}"]`);
+          if (panel) panel.classList.add('active');
+        });
+      });
+    })();
+  </script>
 </BaseLayout>
 
 <style>
